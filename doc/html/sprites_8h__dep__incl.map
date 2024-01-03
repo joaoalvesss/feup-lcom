@@ -1,0 +1,9 @@
+<map id="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/model/sprites.h" name="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/model/sprites.h">
+<area shape="rect" id="node1" title="file used to create and destroy sprites" alt="" coords="287,5,477,61"/>
+<area shape="rect" id="node2" href="$model_8h.html" title="file that is part of and MVC system and responsible by the modeling of the game" alt="" coords="153,109,344,165"/>
+<area shape="rect" id="node4" href="$view_8h.html" title="file that is part of and MVC system and responsible for drawing the game images and having the game l..." alt="" coords="287,213,477,269"/>
+<area shape="rect" id="node7" href="$sprites_8c.html" title=" " alt="" coords="420,109,611,165"/>
+<area shape="rect" id="node3" href="$main_8c.html" title=" " alt="" coords="5,317,196,373"/>
+<area shape="rect" id="node6" href="$model_8c.html" title=" " alt="" coords="72,213,263,269"/>
+<area shape="rect" id="node5" href="$view_8c.html" title=" " alt="" coords="287,317,477,373"/>
+</map>

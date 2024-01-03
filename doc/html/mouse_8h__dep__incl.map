@@ -1,0 +1,9 @@
+<map id="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/devices/mouse/mouse.h" name="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/devices/mouse/mouse.h">
+<area shape="rect" id="node1" title="file that has functions to allow configurating and using the mouse" alt="" coords="239,5,445,61"/>
+<area shape="rect" id="node2" href="$mouse_8c.html" title=" " alt="" coords="5,109,212,165"/>
+<area shape="rect" id="node3" href="$main_8c.html" title=" " alt="" coords="205,317,396,373"/>
+<area shape="rect" id="node4" href="$model_8h.html" title="file that is part of and MVC system and responsible by the modeling of the game" alt="" coords="339,109,529,165"/>
+<area shape="rect" id="node5" href="$view_8h.html" title="file that is part of and MVC system and responsible for drawing the game images and having the game l..." alt="" coords="553,213,744,269"/>
+<area shape="rect" id="node7" href="$model_8c.html" title=" " alt="" coords="339,213,529,269"/>
+<area shape="rect" id="node6" href="$view_8c.html" title=" " alt="" coords="553,317,744,373"/>
+</map>

@@ -1,0 +1,151 @@
+\hypertarget{timer_8h}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/devices/timer/timer.h File Reference}
+\label{timer_8h}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/timer/timer.h@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/timer/timer.h}}
+
+
+file that has functions to allow configurating the timers  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/timer.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8254.\+h\char`\"{}}\newline
+Include dependency graph for timer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{timer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{timer_8h_af2c04fa8e97ffa748fd3f612886a92a7}{timer\+\_\+set\+\_\+frequency}} (uint8\+\_\+t timer, uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em set the frequency of a timer \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{timer_8h_a74c67a2dec2c0d3d6f0cf68e89d4b14e}{timer\+\_\+subscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em function to subscribe timer interruptions \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{timer_8h_a34c22ebdcbc43e47f0ad8406704d3610}{timer\+\_\+unsubscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em function to unsubscribe timer interruptions \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{timer_8h_a703c60b40c8c49607d6ecb6fef82d27a}{timer\+\_\+get\+\_\+conf}} (uint8\+\_\+t timer, uint8\+\_\+t $\ast$st)
+\begin{DoxyCompactList}\small\item\em function to get the current timer configuration \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+file that has functions to allow configurating the timers 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{timer_8h_a703c60b40c8c49607d6ecb6fef82d27a}\label{timer_8h_a703c60b40c8c49607d6ecb6fef82d27a}} 
+\index{timer.h@{timer.h}!timer\_get\_conf@{timer\_get\_conf}}
+\index{timer\_get\_conf@{timer\_get\_conf}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_get\_conf()}{timer\_get\_conf()}}
+{\footnotesize\ttfamily int() timer\+\_\+get\+\_\+conf (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer,  }\item[{uint8\+\_\+t $\ast$}]{st }\end{DoxyParamCaption})}
+
+
+
+function to get the current timer configuration 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & which timer to get the configuration \\
+\hline
+{\em st} & timer status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{timer_8h_a703c60b40c8c49607d6ecb6fef82d27a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{timer_8h_a703c60b40c8c49607d6ecb6fef82d27a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{timer_8h_af2c04fa8e97ffa748fd3f612886a92a7}\label{timer_8h_af2c04fa8e97ffa748fd3f612886a92a7}} 
+\index{timer.h@{timer.h}!timer\_set\_frequency@{timer\_set\_frequency}}
+\index{timer\_set\_frequency@{timer\_set\_frequency}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_set\_frequency()}{timer\_set\_frequency()}}
+{\footnotesize\ttfamily int() timer\+\_\+set\+\_\+frequency (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer,  }\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+set the frequency of a timer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & that we want to configurate \\
+\hline
+{\em freq} & frequency that we want to set in the timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h_af2c04fa8e97ffa748fd3f612886a92a7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{timer_8h_a74c67a2dec2c0d3d6f0cf68e89d4b14e}\label{timer_8h_a74c67a2dec2c0d3d6f0cf68e89d4b14e}} 
+\index{timer.h@{timer.h}!timer\_subscribe\_interrupts@{timer\_subscribe\_interrupts}}
+\index{timer\_subscribe\_interrupts@{timer\_subscribe\_interrupts}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_subscribe\_interrupts()}{timer\_subscribe\_interrupts()}}
+{\footnotesize\ttfamily int() timer\+\_\+subscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function to subscribe timer interruptions 
+
+\begin{DoxyReturn}{Returns}
+0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h_a74c67a2dec2c0d3d6f0cf68e89d4b14e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{timer_8h_a34c22ebdcbc43e47f0ad8406704d3610}\label{timer_8h_a34c22ebdcbc43e47f0ad8406704d3610}} 
+\index{timer.h@{timer.h}!timer\_unsubscribe\_interrupts@{timer\_unsubscribe\_interrupts}}
+\index{timer\_unsubscribe\_interrupts@{timer\_unsubscribe\_interrupts}!timer.h@{timer.h}}
+\doxysubsubsection{\texorpdfstring{timer\_unsubscribe\_interrupts()}{timer\_unsubscribe\_interrupts()}}
+{\footnotesize\ttfamily int() timer\+\_\+unsubscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function to unsubscribe timer interruptions 
+
+\begin{DoxyReturn}{Returns}
+0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h_a34c22ebdcbc43e47f0ad8406704d3610_icgraph}
+\end{center}
+\end{figure}

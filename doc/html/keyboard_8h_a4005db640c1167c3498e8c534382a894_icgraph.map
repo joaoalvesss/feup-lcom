@@ -1,0 +1,12 @@
+<map id="keyboard_mouse_read_status" name="keyboard_mouse_read_status">
+<area shape="rect" id="node1" title="this function reads the current status of the mouse or keyboard" alt="" coords="835,136,1004,177"/>
+<area shape="rect" id="node2" href="$keyboard_8h.html#aae0497df68cd37731baf61c8f0677540" title="this function reads the current status of the mouse or keyboard" alt="" coords="391,85,561,127"/>
+<area shape="rect" id="node7" href="$keyboard_8h.html#ad062237bab294a2930773a4d2a031c04" title="this function tries to write the given command to the given port" alt="" coords="613,165,787,207"/>
+<area shape="rect" id="node3" href="$keyboard_8c.html#aee7480a4c3fc49a7d49a54e8073193f6" title=" " alt="" coords="185,5,330,47"/>
+<area shape="rect" id="node4" href="$model_8h.html#ae68939cf468635ca6f6e4415e876fb89" title="this function uses &quot;state machines&quot; to detect where the game is at the moment and uses the keyboard t..." alt="" coords="176,71,339,98"/>
+<area shape="rect" id="node6" href="$model_8h.html#a3a151327b39d8c3314bca0f254f8dd6d" title="this fuction is responsable for interpreting the mouse movement and clicks, and update the mouse para..." alt="" coords="185,122,329,149"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,147,128,174"/>
+<area shape="rect" id="node8" href="$mouse_8h.html#a38d52a9770ba9b635e98e4968ae7c330" title="this function writes directly into the mouse the command that is passed" alt="" coords="387,173,565,199"/>
+<area shape="rect" id="node9" href="$main_8c.html#a9bf4eac8379ffe2e6c671639af79fe81" title=" " alt="" coords="209,173,305,199"/>
+<area shape="rect" id="node10" href="$main_8c.html#a10a473a0f9910ea87a0606ef64a8d829" title=" " alt="" coords="206,223,309,250"/>
+</map>

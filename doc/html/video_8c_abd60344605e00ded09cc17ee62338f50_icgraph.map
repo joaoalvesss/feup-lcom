@@ -1,0 +1,6 @@
+<map id="map_phys_vir_mem" name="map_phys_vir_mem">
+<area shape="rect" id="node1" title="allocates virtual and physical memory for the buffers depending on the mode that we pass to it" alt="" coords="463,5,617,32"/>
+<area shape="rect" id="node2" href="$view_8h.html#aa349fdcbc9b3263b4ad1add7c91441d9" title="set the buffers in order to use double buffering to avoid flickers in the game" alt="" coords="327,5,415,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a10a473a0f9910ea87a0606ef64a8d829" title=" " alt="" coords="176,5,279,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,128,32"/>
+</map>

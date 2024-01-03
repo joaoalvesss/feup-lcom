@@ -1,0 +1,4 @@
+<map id="setBuffers" name="setBuffers">
+<area shape="rect" id="node1" title="set the buffers in order to use double buffering to avoid flickers in the game" alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$video_8c.html#abd60344605e00ded09cc17ee62338f50" title="allocates virtual and physical memory for the buffers depending on the mode that we pass to it" alt="" coords="141,5,296,32"/>
+</map>

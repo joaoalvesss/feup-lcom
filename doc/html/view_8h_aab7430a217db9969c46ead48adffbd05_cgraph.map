@@ -1,0 +1,5 @@
+<map id="drawMouse" name="drawMouse">
+<area shape="rect" id="node1" title="this fuction is responsable of drawing the mouse into all menus, and detecting if the mouse is hover ..." alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#a8f7f58314c6c6348e3bcd7f36fca6a87" title="draws the image given at the coords of the screen given" alt="" coords="151,5,273,32"/>
+<area shape="rect" id="node3" href="$video_8c.html#a6b88ccd676a7ccd65e48cfc0857d4a7f" title="draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen" alt="" coords="321,5,413,32"/>
+</map>

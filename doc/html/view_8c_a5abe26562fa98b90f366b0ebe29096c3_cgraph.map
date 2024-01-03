@@ -1,0 +1,6 @@
+<map id="display_time" name="display_time">
+<area shape="rect" id="node1" title="this function draws the game screen timer given the coords" alt="" coords="5,31,112,57"/>
+<area shape="rect" id="node2" href="$view_8c.html#a7323e399bcd0931d665010acb8197848" title="this function draws a digit given the digit number and the coords" alt="" coords="160,5,260,32"/>
+<area shape="rect" id="node3" href="$view_8c.html#a8f7f58314c6c6348e3bcd7f36fca6a87" title="draws the image given at the coords of the screen given" alt="" coords="308,31,431,57"/>
+<area shape="rect" id="node4" href="$video_8c.html#a6b88ccd676a7ccd65e48cfc0857d4a7f" title="draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen" alt="" coords="479,31,571,57"/>
+</map>

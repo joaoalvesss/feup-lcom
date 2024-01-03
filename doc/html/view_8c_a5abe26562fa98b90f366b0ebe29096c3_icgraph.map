@@ -1,0 +1,9 @@
+<map id="display_time" name="display_time">
+<area shape="rect" id="node1" title="this function draws the game screen timer given the coords" alt="" coords="649,56,756,83"/>
+<area shape="rect" id="node2" href="$view_8h.html#a292a3b997aaab446dcb392b24493ca77" title="this function is responsable of drawing the a game with easy difficulty (4 by 2 card grid) and the fr..." alt="" coords="466,5,590,32"/>
+<area shape="rect" id="node6" href="$view_8h.html#a811ec2b7dab4374f0307023df122c58b" title="this function is responsable of drawing the a game with hard difficulty (4 by 4 card grid) and the fr..." alt="" coords="466,56,590,83"/>
+<area shape="rect" id="node7" href="$view_8h.html#a9288ab4bd242edb3273fcde58e48aa56" title="this function is responsable of drawing the a game with medium difficulty (4 by 3 card grid) and the ..." alt="" coords="455,107,601,133"/>
+<area shape="rect" id="node3" href="$view_8h.html#a10dc0094d88befe86dd5990628f382f3" title="using a state machine this function detects whenever a state is changed and if so,..." alt="" coords="283,56,407,83"/>
+<area shape="rect" id="node4" href="$view_8h.html#a231e4dd52378c7442957e86cb5547465" title="this function reads the current states and makes actions accordingly, such as printing a new frame,..." alt="" coords="176,56,235,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,56,128,83"/>
+</map>

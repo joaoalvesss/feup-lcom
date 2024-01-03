@@ -1,0 +1,12 @@
+<map id="endSession" name="endSession">
+<area shape="rect" id="node1" title=" " alt="" coords="5,123,101,149"/>
+<area shape="rect" id="node2" href="$model_8c.html#aff10aec7cc06629594d351d947dbbaa5" title="frees the memory of every sprite used in the game using the method destroySprite from sprite...." alt="" coords="202,5,318,32"/>
+<area shape="rect" id="node4" href="$keyboard_8c.html#a97f07efdc4bf5955236db1b8f111daf6" title="this function unsubscribes the keyboard interrupts" alt="" coords="177,57,343,98"/>
+<area shape="rect" id="node5" href="$mouse_8c.html#adaf9bbdd3ddda1b50021f21c37df1c9c" title="this function unsubscribes the keyboard interrupts" alt="" coords="149,123,371,149"/>
+<area shape="rect" id="node6" href="$mouse_8c.html#a38d52a9770ba9b635e98e4968ae7c330" title="this function writes directly into the mouse the command that is passed" alt="" coords="171,173,349,200"/>
+<area shape="rect" id="node10" href="$timer_8c.html#a34c22ebdcbc43e47f0ad8406704d3610" title="function to unsubscribe timer interruptions" alt="" coords="154,224,366,251"/>
+<area shape="rect" id="node3" href="$sprites_8c.html#a0df3be0ecfd03c1945309a52456c29e7" title="this class adapted function frees the memory that the sprite occupated" alt="" coords="451,5,560,32"/>
+<area shape="rect" id="node7" href="$keyboard_8c.html#ad062237bab294a2930773a4d2a031c04" title="this function tries to write the given command to the given port" alt="" coords="419,137,592,178"/>
+<area shape="rect" id="node9" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="857,173,956,200"/>
+<area shape="rect" id="node8" href="$keyboard_8c.html#a4005db640c1167c3498e8c534382a894" title="this function reads the current status of the mouse or keyboard" alt="" coords="640,137,809,178"/>
+</map>

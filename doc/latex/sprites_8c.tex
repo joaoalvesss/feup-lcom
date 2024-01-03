@@ -1,0 +1,70 @@
+\hypertarget{sprites_8c}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/model/sprites.c File Reference}
+\label{sprites_8c}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/model/sprites.c@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/model/sprites.c}}
+{\ttfamily \#include \char`\"{}sprites.\+h\char`\"{}}\newline
+Include dependency graph for sprites.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprites_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{sprites_8c_a6c5f813a7c41430ff5a2caf595daedfa}{create\+Sprite}} (xpm\+\_\+map\+\_\+t map)
+\begin{DoxyCompactList}\small\item\em this class adpated function creates a sprite object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sprites_8c_a0df3be0ecfd03c1945309a52456c29e7}{destroy\+Sprite}} (\mbox{\hyperlink{structSprite}{Sprite}} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em this class adapted function frees the memory that the sprite occupated \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sprites_8c_a6c5f813a7c41430ff5a2caf595daedfa}\label{sprites_8c_a6c5f813a7c41430ff5a2caf595daedfa}} 
+\index{sprites.c@{sprites.c}!createSprite@{createSprite}}
+\index{createSprite@{createSprite}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{createSprite()}{createSprite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ create\+Sprite (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{sprite }\end{DoxyParamCaption})}
+
+
+
+this class adpated function creates a sprite object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & xpm\+\_\+map that will be converted in an object of the type struct \mbox{\hyperlink{structSprite}{Sprite}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sprite$\ast$\+: a pointer to the converted \mbox{\hyperlink{structSprite}{Sprite}} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprites_8c_a6c5f813a7c41430ff5a2caf595daedfa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sprites_8c_a0df3be0ecfd03c1945309a52456c29e7}\label{sprites_8c_a0df3be0ecfd03c1945309a52456c29e7}} 
+\index{sprites.c@{sprites.c}!destroySprite@{destroySprite}}
+\index{destroySprite@{destroySprite}!sprites.c@{sprites.c}}
+\doxysubsubsection{\texorpdfstring{destroySprite()}{destroySprite()}}
+{\footnotesize\ttfamily void destroy\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSprite}{Sprite}} $\ast$}]{sp }\end{DoxyParamCaption})}
+
+
+
+this class adapted function frees the memory that the sprite occupated 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & sprite that we want to free \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprites_8c_a0df3be0ecfd03c1945309a52456c29e7_icgraph}
+\end{center}
+\end{figure}

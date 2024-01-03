@@ -1,0 +1,619 @@
+\hypertarget{view_8h}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/view/view.h File Reference}
+\label{view_8h}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/view/view.h@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/view/view.h}}
+
+
+file that is part of and M\+VC system and responsible for drawing the game images and having the game logic implemented  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}configuration.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/model.\+h\char`\"{}}\newline
+Include dependency graph for view.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{view_8h_a10dc0094d88befe86dd5990628f382f3}{draw\+New\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em using a state machine this function detects whenever a state is changed and if so, a new screen will be loaded \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a15a9e4278686eb27a82c9758b018c2cd}{draw\+Start\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the main menu sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a292a3b997aaab446dcb392b24493ca77}{draw\+Easy\+Game}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the a game with easy difficulty (4 by 2 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a9288ab4bd242edb3273fcde58e48aa56}{draw\+Medium\+Game}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the a game with medium difficulty (4 by 3 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a811ec2b7dab4374f0307023df122c58b}{draw\+Hard\+Game}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the a game with hard difficulty (4 by 4 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a7880fecdee602199b26433132ae89894}{draw\+End\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the end game menu sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_aab7430a217db9969c46ead48adffbd05}{draw\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em this fuction is responsable of drawing the mouse into all menus, and detecting if the mouse is hover some button and changing the sprite that is being drawn \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a5105484162fd30fa5ff587215ed69d73}{draw\+Frames}} (int i)
+\begin{DoxyCompactList}\small\item\em create the \char`\"{}animation\char`\"{} of the dinossaur image (the back part of the cards), the \char`\"{}animation\char`\"{} is created having three xpms and alternating between them \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_ab2256191d5083f87c31ad9558e9c1cc7}{free\+Frames}} ()
+\item 
+void \mbox{\hyperlink{view_8h_aa4f56964a2bcd69024d3a8cd0d74e702}{change\+Frame}} (int i)
+\begin{DoxyCompactList}\small\item\em responsible for changing the current sprite that is being displayed in the back part of the cards to the next sprite in order to create the \char`\"{}animation\char`\"{} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a14d0fff881f78f4b621ebed6bb9b890f}{flip\+Buffers}} ()
+\begin{DoxyCompactList}\small\item\em this function copies the content of the first buffer to second buffer in order to allow the double buffering by memory copy \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a8f7f58314c6c6348e3bcd7f36fca6a87}{draw\+Sprite\+Xpm}} (\mbox{\hyperlink{structSprite}{Sprite}} $\ast$sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em draws the image given at the coords of the screen given \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_aa349fdcbc9b3263b4ad1add7c91441d9}{set\+Buffers}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em set the buffers in order to use double buffering to avoid flickers in the game \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a58b298426f1af79878e50b55092dcdf3}{flip\+\_\+card}} (uint8\+\_\+t card)
+\begin{DoxyCompactList}\small\item\em responsable for flipping the cards to show their content \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_aba001e5d60ec495c70804e0aed1aa06b}{unflip\+\_\+card}} (uint8\+\_\+t card)
+\begin{DoxyCompactList}\small\item\em responsable for flipping the cards to hide their content \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a231e4dd52378c7442957e86cb5547465}{game}} ()
+\begin{DoxyCompactList}\small\item\em this function reads the current states and makes actions accordingly, such as printing a new frame, or in-\/game actions such as selecting and turning cards \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a70929694baa82ac490dbf80cf91b0ae6}{game\+\_\+setup}} ()
+\begin{DoxyCompactList}\small\item\em this function creates a random card board for the game to work on, depending on difficulty. It also resets some states so that the game becomes ready to play \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a5abe26562fa98b90f366b0ebe29096c3}{display\+\_\+time}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em this function draws the game screen timer given the coords \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a7323e399bcd0931d665010acb8197848}{display\+Digit}} (uint32\+\_\+t digit, int x, int y)
+\begin{DoxyCompactList}\small\item\em this function draws a digit given the digit number and the coords \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_aa87a087be2de23a2f5d05ed2daa006d7}{select\+\_\+card}} (int n)
+\begin{DoxyCompactList}\small\item\em changes the card bits in order to know its position and the type of the card \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+file that is part of and M\+VC system and responsible for drawing the game images and having the game logic implemented 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{view_8h_aa4f56964a2bcd69024d3a8cd0d74e702}\label{view_8h_aa4f56964a2bcd69024d3a8cd0d74e702}} 
+\index{view.h@{view.h}!changeFrame@{changeFrame}}
+\index{changeFrame@{changeFrame}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{changeFrame()}{changeFrame()}}
+{\footnotesize\ttfamily void change\+Frame (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+responsible for changing the current sprite that is being displayed in the back part of the cards to the next sprite in order to create the \char`\"{}animation\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & in the three images that represent the \char`\"{}animation\char`\"{}, i represents the number of the image that will be displayed next \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_aa4f56964a2bcd69024d3a8cd0d74e702_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a5abe26562fa98b90f366b0ebe29096c3}\label{view_8h_a5abe26562fa98b90f366b0ebe29096c3}} 
+\index{view.h@{view.h}!display\_time@{display\_time}}
+\index{display\_time@{display\_time}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{display\_time()}{display\_time()}}
+{\footnotesize\ttfamily int display\+\_\+time (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+this function draws the game screen timer given the coords 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & is the x coordenad where it draws the timer \\
+\hline
+{\em y} & is the y coordenad where it draws the timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything goes well, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a5abe26562fa98b90f366b0ebe29096c3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a5abe26562fa98b90f366b0ebe29096c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a7323e399bcd0931d665010acb8197848}\label{view_8h_a7323e399bcd0931d665010acb8197848}} 
+\index{view.h@{view.h}!displayDigit@{displayDigit}}
+\index{displayDigit@{displayDigit}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{displayDigit()}{displayDigit()}}
+{\footnotesize\ttfamily int display\+Digit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{digit,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+this function draws a digit given the digit number and the coords 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digit} & is the number from 0 to 9 that is used to determine which digit to draw \\
+\hline
+{\em x} & is the x coordenad where it draws the digit \\
+\hline
+{\em y} & is the y coordenad where it draws the digit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything goes well, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a7323e399bcd0931d665010acb8197848_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a7323e399bcd0931d665010acb8197848_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a292a3b997aaab446dcb392b24493ca77}\label{view_8h_a292a3b997aaab446dcb392b24493ca77}} 
+\index{view.h@{view.h}!drawEasyGame@{drawEasyGame}}
+\index{drawEasyGame@{drawEasyGame}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawEasyGame()}{drawEasyGame()}}
+{\footnotesize\ttfamily void draw\+Easy\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the a game with easy difficulty (4 by 2 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a292a3b997aaab446dcb392b24493ca77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a292a3b997aaab446dcb392b24493ca77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a7880fecdee602199b26433132ae89894}\label{view_8h_a7880fecdee602199b26433132ae89894}} 
+\index{view.h@{view.h}!drawEndMenu@{drawEndMenu}}
+\index{drawEndMenu@{drawEndMenu}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawEndMenu()}{drawEndMenu()}}
+{\footnotesize\ttfamily void draw\+End\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the end game menu sprite 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a7880fecdee602199b26433132ae89894_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a7880fecdee602199b26433132ae89894_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a5105484162fd30fa5ff587215ed69d73}\label{view_8h_a5105484162fd30fa5ff587215ed69d73}} 
+\index{view.h@{view.h}!drawFrames@{drawFrames}}
+\index{drawFrames@{drawFrames}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawFrames()}{drawFrames()}}
+{\footnotesize\ttfamily void draw\+Frames (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+create the \char`\"{}animation\char`\"{} of the dinossaur image (the back part of the cards), the \char`\"{}animation\char`\"{} is created having three xpms and alternating between them 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the amount of frames that will be drawn depending on the difficulty selected \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a5105484162fd30fa5ff587215ed69d73_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a5105484162fd30fa5ff587215ed69d73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a811ec2b7dab4374f0307023df122c58b}\label{view_8h_a811ec2b7dab4374f0307023df122c58b}} 
+\index{view.h@{view.h}!drawHardGame@{drawHardGame}}
+\index{drawHardGame@{drawHardGame}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawHardGame()}{drawHardGame()}}
+{\footnotesize\ttfamily void draw\+Hard\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the a game with hard difficulty (4 by 4 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a811ec2b7dab4374f0307023df122c58b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a811ec2b7dab4374f0307023df122c58b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a9288ab4bd242edb3273fcde58e48aa56}\label{view_8h_a9288ab4bd242edb3273fcde58e48aa56}} 
+\index{view.h@{view.h}!drawMediumGame@{drawMediumGame}}
+\index{drawMediumGame@{drawMediumGame}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawMediumGame()}{drawMediumGame()}}
+{\footnotesize\ttfamily void draw\+Medium\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the a game with medium difficulty (4 by 3 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a9288ab4bd242edb3273fcde58e48aa56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a9288ab4bd242edb3273fcde58e48aa56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_aab7430a217db9969c46ead48adffbd05}\label{view_8h_aab7430a217db9969c46ead48adffbd05}} 
+\index{view.h@{view.h}!drawMouse@{drawMouse}}
+\index{drawMouse@{drawMouse}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawMouse()}{drawMouse()}}
+{\footnotesize\ttfamily void draw\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this fuction is responsable of drawing the mouse into all menus, and detecting if the mouse is hover some button and changing the sprite that is being drawn 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_aab7430a217db9969c46ead48adffbd05_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_aab7430a217db9969c46ead48adffbd05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a10dc0094d88befe86dd5990628f382f3}\label{view_8h_a10dc0094d88befe86dd5990628f382f3}} 
+\index{view.h@{view.h}!drawNewFrame@{drawNewFrame}}
+\index{drawNewFrame@{drawNewFrame}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawNewFrame()}{drawNewFrame()}}
+{\footnotesize\ttfamily void draw\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+using a state machine this function detects whenever a state is changed and if so, a new screen will be loaded 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a10dc0094d88befe86dd5990628f382f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a10dc0094d88befe86dd5990628f382f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a8f7f58314c6c6348e3bcd7f36fca6a87}\label{view_8h_a8f7f58314c6c6348e3bcd7f36fca6a87}} 
+\index{view.h@{view.h}!drawSpriteXpm@{drawSpriteXpm}}
+\index{drawSpriteXpm@{drawSpriteXpm}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawSpriteXpm()}{drawSpriteXpm()}}
+{\footnotesize\ttfamily int draw\+Sprite\+Xpm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSprite}{Sprite}} $\ast$}]{sprite,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+draws the image given at the coords of the screen given 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & the image that we want to draw \\
+\hline
+{\em x} & the screen width of where we want to draw the sprite \\
+\hline
+{\em y} & the screen height of where we want to draw the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{view_8h_a8f7f58314c6c6348e3bcd7f36fca6a87_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a8f7f58314c6c6348e3bcd7f36fca6a87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a15a9e4278686eb27a82c9758b018c2cd}\label{view_8h_a15a9e4278686eb27a82c9758b018c2cd}} 
+\index{view.h@{view.h}!drawStartMenu@{drawStartMenu}}
+\index{drawStartMenu@{drawStartMenu}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{drawStartMenu()}{drawStartMenu()}}
+{\footnotesize\ttfamily void draw\+Start\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the main menu sprite 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a15a9e4278686eb27a82c9758b018c2cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a15a9e4278686eb27a82c9758b018c2cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a58b298426f1af79878e50b55092dcdf3}\label{view_8h_a58b298426f1af79878e50b55092dcdf3}} 
+\index{view.h@{view.h}!flip\_card@{flip\_card}}
+\index{flip\_card@{flip\_card}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{flip\_card()}{flip\_card()}}
+{\footnotesize\ttfamily int flip\+\_\+card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card }\end{DoxyParamCaption})}
+
+
+
+responsable for flipping the cards to show their content 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & in the form xxyy1nnn, where xx represents the position on the x axis, y on the y axis, and nnn is the card type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if card was flipped with success, 1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{view_8h_a58b298426f1af79878e50b55092dcdf3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a14d0fff881f78f4b621ebed6bb9b890f}\label{view_8h_a14d0fff881f78f4b621ebed6bb9b890f}} 
+\index{view.h@{view.h}!flipBuffers@{flipBuffers}}
+\index{flipBuffers@{flipBuffers}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{flipBuffers()}{flipBuffers()}}
+{\footnotesize\ttfamily int flip\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function copies the content of the first buffer to second buffer in order to allow the double buffering by memory copy 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success, otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a14d0fff881f78f4b621ebed6bb9b890f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_ab2256191d5083f87c31ad9558e9c1cc7}\label{view_8h_ab2256191d5083f87c31ad9558e9c1cc7}} 
+\index{view.h@{view.h}!freeFrames@{freeFrames}}
+\index{freeFrames@{freeFrames}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{freeFrames()}{freeFrames()}}
+{\footnotesize\ttfamily void free\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{view_8h_a231e4dd52378c7442957e86cb5547465}\label{view_8h_a231e4dd52378c7442957e86cb5547465}} 
+\index{view.h@{view.h}!game@{game}}
+\index{game@{game}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{game()}{game()}}
+{\footnotesize\ttfamily int game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function reads the current states and makes actions accordingly, such as printing a new frame, or in-\/game actions such as selecting and turning cards 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything gone correct otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a231e4dd52378c7442957e86cb5547465_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{view_8h_a231e4dd52378c7442957e86cb5547465_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_a70929694baa82ac490dbf80cf91b0ae6}\label{view_8h_a70929694baa82ac490dbf80cf91b0ae6}} 
+\index{view.h@{view.h}!game\_setup@{game\_setup}}
+\index{game\_setup@{game\_setup}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{game\_setup()}{game\_setup()}}
+{\footnotesize\ttfamily int game\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function creates a random card board for the game to work on, depending on difficulty. It also resets some states so that the game becomes ready to play 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything goes well, 1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a70929694baa82ac490dbf80cf91b0ae6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_aa87a087be2de23a2f5d05ed2daa006d7}\label{view_8h_aa87a087be2de23a2f5d05ed2daa006d7}} 
+\index{view.h@{view.h}!select\_card@{select\_card}}
+\index{select\_card@{select\_card}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{select\_card()}{select\_card()}}
+{\footnotesize\ttfamily int select\+\_\+card (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+changes the card bits in order to know its position and the type of the card 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & 1 or 2 depending on it being the first or the second selected by the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_aa87a087be2de23a2f5d05ed2daa006d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_aa349fdcbc9b3263b4ad1add7c91441d9}\label{view_8h_aa349fdcbc9b3263b4ad1add7c91441d9}} 
+\index{view.h@{view.h}!setBuffers@{setBuffers}}
+\index{setBuffers@{setBuffers}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{setBuffers()}{setBuffers()}}
+{\footnotesize\ttfamily int set\+Buffers (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+set the buffers in order to use double buffering to avoid flickers in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & passed to know the buffer size needed to the mode selected so only the needed memory will be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if sucess, otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{view_8h_aa349fdcbc9b3263b4ad1add7c91441d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_aa349fdcbc9b3263b4ad1add7c91441d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8h_aba001e5d60ec495c70804e0aed1aa06b}\label{view_8h_aba001e5d60ec495c70804e0aed1aa06b}} 
+\index{view.h@{view.h}!unflip\_card@{unflip\_card}}
+\index{unflip\_card@{unflip\_card}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{unflip\_card()}{unflip\_card()}}
+{\footnotesize\ttfamily int unflip\+\_\+card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card }\end{DoxyParamCaption})}
+
+
+
+responsable for flipping the cards to hide their content 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & in the form xxyy1nnn, where xx represents the position on the x axis, y on the y axis, and nnn is the card type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if card was unflipped sucess, 1 otherwise ~\newline
+ 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_aba001e5d60ec495c70804e0aed1aa06b_icgraph}
+\end{center}
+\end{figure}

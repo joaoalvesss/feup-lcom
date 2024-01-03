@@ -1,0 +1,4 @@
+<map id="destroySprites" name="destroySprites">
+<area shape="rect" id="node1" title="frees the memory of every sprite used in the game using the method destroySprite from sprite...." alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node2" href="$sprites_8c.html#a0df3be0ecfd03c1945309a52456c29e7" title="this class adapted function frees the memory that the sprite occupated" alt="" coords="169,5,279,32"/>
+</map>

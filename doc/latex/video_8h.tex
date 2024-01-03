@@ -1,0 +1,166 @@
+\hypertarget{video_8h}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/devices/video/video.h File Reference}
+\label{video_8h}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/video/video.h@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/video/video.h}}
+
+
+file that has functions to allow configurating and map memory to the graphics card  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+Include dependency graph for video.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{video_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{video_8h_aa3b7ca6a46de82690705be121df01289}{V\+I\+D\+E\+O\+\_\+\+V\+A\+L\+UE}}~0x10;
+\item 
+\#define \mbox{\hyperlink{video_8h_ab208dc4bc0e43eff7f62a8841dcf6cb5}{V\+B\+E\+\_\+\+M\+O\+DE}}~0x4\+F02;
+\item 
+\#define \mbox{\hyperlink{video_8h_a07e07e7c3b1a5cb76633d0260c5cfa2f}{L\+I\+N\+E\+A\+R\+\_\+\+B\+U\+F\+F\+ER}}~B\+IT(14);
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{video_8h_aff18cec0a8098ff8a3f8cc58c4cad8bf}{video\+\_\+init}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em allocates memory for the mode and sets and configurates the desired video mode \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a48e360e4a4836f565eefb1cbe58d3769}{map\+\_\+phys\+\_\+vir\+\_\+mem}} (uint16\+\_\+t mode, uint8\+\_\+t $\ast$$\ast$buffer)
+\begin{DoxyCompactList}\small\item\em allocates virtual and physical memory for the buffers depending on the mode that we pass to it \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_aac0e6c0ef6d9620a1998ef2ceae31389}{draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color, uint8\+\_\+t $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{video_8h_ad6835488a133262b9dbb5d020b912b53}{m\+\_\+info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+file that has functions to allow configurating and map memory to the graphics card 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{video_8h_a07e07e7c3b1a5cb76633d0260c5cfa2f}\label{video_8h_a07e07e7c3b1a5cb76633d0260c5cfa2f}} 
+\index{video.h@{video.h}!LINEAR\_BUFFER@{LINEAR\_BUFFER}}
+\index{LINEAR\_BUFFER@{LINEAR\_BUFFER}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{LINEAR\_BUFFER}{LINEAR\_BUFFER}}
+{\footnotesize\ttfamily \#define L\+I\+N\+E\+A\+R\+\_\+\+B\+U\+F\+F\+ER~B\+IT(14);}
+
+\mbox{\Hypertarget{video_8h_ab208dc4bc0e43eff7f62a8841dcf6cb5}\label{video_8h_ab208dc4bc0e43eff7f62a8841dcf6cb5}} 
+\index{video.h@{video.h}!VBE\_MODE@{VBE\_MODE}}
+\index{VBE\_MODE@{VBE\_MODE}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{VBE\_MODE}{VBE\_MODE}}
+{\footnotesize\ttfamily \#define V\+B\+E\+\_\+\+M\+O\+DE~0x4\+F02;}
+
+\mbox{\Hypertarget{video_8h_aa3b7ca6a46de82690705be121df01289}\label{video_8h_aa3b7ca6a46de82690705be121df01289}} 
+\index{video.h@{video.h}!VIDEO\_VALUE@{VIDEO\_VALUE}}
+\index{VIDEO\_VALUE@{VIDEO\_VALUE}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{VIDEO\_VALUE}{VIDEO\_VALUE}}
+{\footnotesize\ttfamily \#define V\+I\+D\+E\+O\+\_\+\+V\+A\+L\+UE~0x10;}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{video_8h_aac0e6c0ef6d9620a1998ef2ceae31389}\label{video_8h_aac0e6c0ef6d9620a1998ef2ceae31389}} 
+\index{video.h@{video.h}!draw\_pixel@{draw\_pixel}}
+\index{draw\_pixel@{draw\_pixel}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel()}{draw\_pixel()}}
+{\footnotesize\ttfamily int() draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & vertical position of the pixel on the screen \\
+\hline
+{\em y} & horizontal position of the pixel on the screen \\
+\hline
+{\em color} & the color in hex that we want to draw the pixel \\
+\hline
+{\em buffer} & in which buffer will the memory will be copied \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_aac0e6c0ef6d9620a1998ef2ceae31389_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{video_8h_a48e360e4a4836f565eefb1cbe58d3769}\label{video_8h_a48e360e4a4836f565eefb1cbe58d3769}} 
+\index{video.h@{video.h}!map\_phys\_vir\_mem@{map\_phys\_vir\_mem}}
+\index{map\_phys\_vir\_mem@{map\_phys\_vir\_mem}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{map\_phys\_vir\_mem()}{map\_phys\_vir\_mem()}}
+{\footnotesize\ttfamily int() map\+\_\+phys\+\_\+vir\+\_\+mem (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{uint8\+\_\+t $\ast$$\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+allocates virtual and physical memory for the buffers depending on the mode that we pass to it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & video mode that is setted \\
+\hline
+{\em buffer} & where we want to allocate the memory \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_a48e360e4a4836f565eefb1cbe58d3769_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{video_8h_aff18cec0a8098ff8a3f8cc58c4cad8bf}\label{video_8h_aff18cec0a8098ff8a3f8cc58c4cad8bf}} 
+\index{video.h@{video.h}!video\_init@{video\_init}}
+\index{video\_init@{video\_init}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{video\_init()}{video\_init()}}
+{\footnotesize\ttfamily int() video\+\_\+init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+allocates memory for the mode and sets and configurates the desired video mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & video mode that we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8h_aff18cec0a8098ff8a3f8cc58c4cad8bf_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{video_8h_ad6835488a133262b9dbb5d020b912b53}\label{video_8h_ad6835488a133262b9dbb5d020b912b53}} 
+\index{video.h@{video.h}!m\_info@{m\_info}}
+\index{m\_info@{m\_info}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{m\_info}{m\_info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t m\+\_\+info}
+

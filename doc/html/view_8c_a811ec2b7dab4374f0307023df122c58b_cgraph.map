@@ -1,0 +1,9 @@
+<map id="drawHardGame" name="drawHardGame">
+<area shape="rect" id="node1" title="this function is responsable of drawing the a game with hard difficulty (4 by 4 card grid) and the fr..." alt="" coords="5,81,129,108"/>
+<area shape="rect" id="node2" href="$view_8c.html#aa4f56964a2bcd69024d3a8cd0d74e702" title="responsible for changing the current sprite that is being displayed in the back part of the cards to ..." alt="" coords="177,5,288,32"/>
+<area shape="rect" id="node3" href="$view_8c.html#a5abe26562fa98b90f366b0ebe29096c3" title="this function draws the game screen timer given the coords" alt="" coords="179,56,286,83"/>
+<area shape="rect" id="node5" href="$view_8c.html#a8f7f58314c6c6348e3bcd7f36fca6a87" title="draws the image given at the coords of the screen given" alt="" coords="487,81,609,108"/>
+<area shape="rect" id="node7" href="$view_8c.html#a5105484162fd30fa5ff587215ed69d73" title="create the &quot;animation&quot; of the dinossaur image (the back part of the cards), the &quot;animation&quot; is create..." alt="" coords="336,157,439,184"/>
+<area shape="rect" id="node4" href="$view_8c.html#a7323e399bcd0931d665010acb8197848" title="this function draws a digit given the digit number and the coords" alt="" coords="337,5,437,32"/>
+<area shape="rect" id="node6" href="$video_8c.html#a6b88ccd676a7ccd65e48cfc0857d4a7f" title="draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen" alt="" coords="657,81,749,108"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="setupAnimation" name="setupAnimation">
+<area shape="rect" id="node1" title=" " alt="" coords="609,5,735,32"/>
+<area shape="rect" id="node2" href="$view_8c.html#aea25b6a4c32512ab95df8d6084b1f535" title=" " alt="" coords="455,5,561,32"/>
+<area shape="rect" id="node3" href="$view_8h.html#a10dc0094d88befe86dd5990628f382f3" title="using a state machine this function detects whenever a state is changed and if so,..." alt="" coords="283,5,407,32"/>
+<area shape="rect" id="node4" href="$view_8h.html#a231e4dd52378c7442957e86cb5547465" title="this function reads the current states and makes actions accordingly, such as printing a new frame,..." alt="" coords="176,5,235,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,5,128,32"/>
+</map>

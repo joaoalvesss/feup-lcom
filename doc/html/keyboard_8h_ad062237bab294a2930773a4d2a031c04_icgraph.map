@@ -1,0 +1,7 @@
+<map id="keyboard_mouse_write_command" name="keyboard_mouse_write_command">
+<area shape="rect" id="node1" title="this function tries to write the given command to the given port" alt="" coords="553,23,727,65"/>
+<area shape="rect" id="node2" href="$mouse_8h.html#a38d52a9770ba9b635e98e4968ae7c330" title="this function writes directly into the mouse the command that is passed" alt="" coords="327,31,505,57"/>
+<area shape="rect" id="node3" href="$main_8c.html#a9bf4eac8379ffe2e6c671639af79fe81" title=" " alt="" coords="179,5,275,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a10a473a0f9910ea87a0606ef64a8d829" title=" " alt="" coords="176,56,279,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title=" " alt="" coords="5,31,128,57"/>
+</map>

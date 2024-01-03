@@ -1,0 +1,380 @@
+\hypertarget{model_8h}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/model/model.h File Reference}
+\label{model_8h}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/model/model.h@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/model/model.h}}
+
+
+file that is part of and M\+VC system and responsible by the modeling of the game  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}devices/keyboard/keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/video/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}devices/timer/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}configuration.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}model/sprites.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}view/view.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/back1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/back2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/back3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino5.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino6.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino7.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/dino8.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/menus/mainmenu.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/menus/menufinal.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/menus/background.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/mice/dino\+\_\+mouse.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/dinossaurs/frame.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/mice/dino\+\_\+cursor.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/colon.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit0.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit5.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit6.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit7.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit8.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/digit9.\+xpm\char`\"{}}\newline
+Include dependency graph for model.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}{Menu}} \{ \mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2ae9cc1cda766decf12c9f739f15775c40}{M\+E\+N\+U\+\_\+\+S\+T\+A\+RT}}, 
+\mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2aa7e751956da0ab072221ea1f3d0e09a2}{M\+E\+N\+U\+\_\+\+I\+N\+G\+A\+ME}}, 
+\mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2a59271aa2ffe4fe93f9eccf8644fe8abb}{M\+E\+N\+U\+\_\+\+E\+ND}}
+ \}
+\item 
+enum \mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efc}{System}} \{ \mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca1061be6c3fb88d32829cba6f6b2be304}{R\+U\+N\+N\+I\+NG}}, 
+\mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca7a10b5d68d31711288e1fe0fa17dbf4f}{E\+X\+IT}}
+ \}
+\item 
+enum \mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \{ \mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a26d394b5caf2853dbcef5884f0f068dd}{E\+A\+SY}}, 
+\mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a5340ec7ecef6cc3886684a3bd3450d64}{M\+E\+D\+I\+UM}}, 
+\mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a712b8eb9268f114b4afc567f24bc536f}{H\+A\+RD}}
+ \}
+\item 
+enum \mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}{Frame}} \{ \mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5aec34b0b90541576a22697631105dc847}{N\+EW}}, 
+\mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5a2980dd4c84aa84830bfbb0dadc3dc81f}{K\+E\+EP}}
+ \}
+\item 
+enum \mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}{Setup}} \{ \mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63abfea6036e64d9c7c773d277a57d2f959}{DO}}, 
+\mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63a9c954bcf443428c80b0f107b3bc48749}{D\+O\+NE}}
+ \}
+\item 
+enum \mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8}{Game\+Phase}} \{ \mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8a86369c64b458a1e3cffecc2577a9ab7a}{F\+I\+R\+S\+T\+\_\+\+C\+H\+O\+I\+CE}}, 
+\mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8acce16bb109509ca51e1cd21aca1e752b}{S\+E\+C\+O\+N\+D\+\_\+\+C\+H\+O\+I\+CE}}, 
+\mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8a56b36d0d0bb01b339cf1041adc08e262}{P\+A\+U\+SE}}, 
+\mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8af67b5cbd5c4e0550a3e2c1d324b8fe6b}{A\+F\+T\+E\+R\+\_\+\+P\+A\+U\+SE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{model_8h_ac568ae681f60f548a92452e071667544}{setup\+Sprites}} ()
+\begin{DoxyCompactList}\small\item\em creates every sprite used in the game using the method create\+Sprite from sprite.\+h file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8h_aff10aec7cc06629594d351d947dbbaa5}{destroy\+Sprites}} ()
+\begin{DoxyCompactList}\small\item\em frees the memory of every sprite used in the game using the method destroy\+Sprite from sprite.\+h file \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{model_8h_ada1f75d308dd269c459abd78814c464a}{update\+Timer\+State}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsible for calling the method flip\+Buffers at each timer interruption and that allows to have double buffering into the game and for having a counter so we can use it to do time stuff too \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8h_ae68939cf468635ca6f6e4415e876fb89}{update\+Keyboard\+State}} ()
+\begin{DoxyCompactList}\small\item\em this function uses \char`\"{}state machines\char`\"{} to detect where the game is at the moment and uses the keyboard to check the pressed keys in order to change the states of the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8h_a3a151327b39d8c3314bca0f254f8dd6d}{update\+Mouse\+State}} ()
+\begin{DoxyCompactList}\small\item\em this fuction is responsable for interpreting the mouse movement and clicks, and update the mouse parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8h_a91f146a53c511245f78f9e55e7ffb36b}{update\+States}} ()
+\begin{DoxyCompactList}\small\item\em this function interprets the mouse clicks in the screen in order to change the \char`\"{}state machines\char`\"{} in some way \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+file that is part of and M\+VC system and responsible by the modeling of the game 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}\label{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}} 
+\index{model.h@{model.h}!Difficulty@{Difficulty}}
+\index{Difficulty@{Difficulty}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{Difficulty}{Difficulty}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EASY@{EASY}!model.h@{model.h}}\index{model.h@{model.h}!EASY@{EASY}}}\mbox{\Hypertarget{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a26d394b5caf2853dbcef5884f0f068dd}\label{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a26d394b5caf2853dbcef5884f0f068dd}} 
+E\+A\+SY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEDIUM@{MEDIUM}!model.h@{model.h}}\index{model.h@{model.h}!MEDIUM@{MEDIUM}}}\mbox{\Hypertarget{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a5340ec7ecef6cc3886684a3bd3450d64}\label{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a5340ec7ecef6cc3886684a3bd3450d64}} 
+M\+E\+D\+I\+UM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HARD@{HARD}!model.h@{model.h}}\index{model.h@{model.h}!HARD@{HARD}}}\mbox{\Hypertarget{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a712b8eb9268f114b4afc567f24bc536f}\label{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a712b8eb9268f114b4afc567f24bc536f}} 
+H\+A\+RD&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}\label{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}} 
+\index{model.h@{model.h}!Frame@{Frame}}
+\index{Frame@{Frame}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{Frame}{Frame}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}{Frame}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEW@{NEW}!model.h@{model.h}}\index{model.h@{model.h}!NEW@{NEW}}}\mbox{\Hypertarget{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5aec34b0b90541576a22697631105dc847}\label{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5aec34b0b90541576a22697631105dc847}} 
+N\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEEP@{KEEP}!model.h@{model.h}}\index{model.h@{model.h}!KEEP@{KEEP}}}\mbox{\Hypertarget{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5a2980dd4c84aa84830bfbb0dadc3dc81f}\label{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5a2980dd4c84aa84830bfbb0dadc3dc81f}} 
+K\+E\+EP&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{model_8h_a896617de6e1c82953f407789633057d8}\label{model_8h_a896617de6e1c82953f407789633057d8}} 
+\index{model.h@{model.h}!GamePhase@{GamePhase}}
+\index{GamePhase@{GamePhase}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{GamePhase}{GamePhase}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8}{Game\+Phase}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIRST\_CHOICE@{FIRST\_CHOICE}!model.h@{model.h}}\index{model.h@{model.h}!FIRST\_CHOICE@{FIRST\_CHOICE}}}\mbox{\Hypertarget{model_8h_a896617de6e1c82953f407789633057d8a86369c64b458a1e3cffecc2577a9ab7a}\label{model_8h_a896617de6e1c82953f407789633057d8a86369c64b458a1e3cffecc2577a9ab7a}} 
+F\+I\+R\+S\+T\+\_\+\+C\+H\+O\+I\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SECOND\_CHOICE@{SECOND\_CHOICE}!model.h@{model.h}}\index{model.h@{model.h}!SECOND\_CHOICE@{SECOND\_CHOICE}}}\mbox{\Hypertarget{model_8h_a896617de6e1c82953f407789633057d8acce16bb109509ca51e1cd21aca1e752b}\label{model_8h_a896617de6e1c82953f407789633057d8acce16bb109509ca51e1cd21aca1e752b}} 
+S\+E\+C\+O\+N\+D\+\_\+\+C\+H\+O\+I\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PAUSE@{PAUSE}!model.h@{model.h}}\index{model.h@{model.h}!PAUSE@{PAUSE}}}\mbox{\Hypertarget{model_8h_a896617de6e1c82953f407789633057d8a56b36d0d0bb01b339cf1041adc08e262}\label{model_8h_a896617de6e1c82953f407789633057d8a56b36d0d0bb01b339cf1041adc08e262}} 
+P\+A\+U\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AFTER\_PAUSE@{AFTER\_PAUSE}!model.h@{model.h}}\index{model.h@{model.h}!AFTER\_PAUSE@{AFTER\_PAUSE}}}\mbox{\Hypertarget{model_8h_a896617de6e1c82953f407789633057d8af67b5cbd5c4e0550a3e2c1d324b8fe6b}\label{model_8h_a896617de6e1c82953f407789633057d8af67b5cbd5c4e0550a3e2c1d324b8fe6b}} 
+A\+F\+T\+E\+R\+\_\+\+P\+A\+U\+SE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}\label{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}} 
+\index{model.h@{model.h}!Menu@{Menu}}
+\index{Menu@{Menu}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{Menu}{Menu}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}{Menu}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU\_START@{MENU\_START}!model.h@{model.h}}\index{model.h@{model.h}!MENU\_START@{MENU\_START}}}\mbox{\Hypertarget{model_8h_af3d52afbb0d088f62e02208b24a9cbd2ae9cc1cda766decf12c9f739f15775c40}\label{model_8h_af3d52afbb0d088f62e02208b24a9cbd2ae9cc1cda766decf12c9f739f15775c40}} 
+M\+E\+N\+U\+\_\+\+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU\_INGAME@{MENU\_INGAME}!model.h@{model.h}}\index{model.h@{model.h}!MENU\_INGAME@{MENU\_INGAME}}}\mbox{\Hypertarget{model_8h_af3d52afbb0d088f62e02208b24a9cbd2aa7e751956da0ab072221ea1f3d0e09a2}\label{model_8h_af3d52afbb0d088f62e02208b24a9cbd2aa7e751956da0ab072221ea1f3d0e09a2}} 
+M\+E\+N\+U\+\_\+\+I\+N\+G\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU\_END@{MENU\_END}!model.h@{model.h}}\index{model.h@{model.h}!MENU\_END@{MENU\_END}}}\mbox{\Hypertarget{model_8h_af3d52afbb0d088f62e02208b24a9cbd2a59271aa2ffe4fe93f9eccf8644fe8abb}\label{model_8h_af3d52afbb0d088f62e02208b24a9cbd2a59271aa2ffe4fe93f9eccf8644fe8abb}} 
+M\+E\+N\+U\+\_\+\+E\+ND&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}\label{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}} 
+\index{model.h@{model.h}!Setup@{Setup}}
+\index{Setup@{Setup}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{Setup}{Setup}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}{Setup}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DO@{DO}!model.h@{model.h}}\index{model.h@{model.h}!DO@{DO}}}\mbox{\Hypertarget{model_8h_a03a45bcb13e3495c10e2bbd63e351d63abfea6036e64d9c7c773d277a57d2f959}\label{model_8h_a03a45bcb13e3495c10e2bbd63e351d63abfea6036e64d9c7c773d277a57d2f959}} 
+DO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DONE@{DONE}!model.h@{model.h}}\index{model.h@{model.h}!DONE@{DONE}}}\mbox{\Hypertarget{model_8h_a03a45bcb13e3495c10e2bbd63e351d63a9c954bcf443428c80b0f107b3bc48749}\label{model_8h_a03a45bcb13e3495c10e2bbd63e351d63a9c954bcf443428c80b0f107b3bc48749}} 
+D\+O\+NE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efc}\label{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efc}} 
+\index{model.h@{model.h}!System@{System}}
+\index{System@{System}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{System}{System}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efc}{System}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RUNNING@{RUNNING}!model.h@{model.h}}\index{model.h@{model.h}!RUNNING@{RUNNING}}}\mbox{\Hypertarget{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca1061be6c3fb88d32829cba6f6b2be304}\label{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca1061be6c3fb88d32829cba6f6b2be304}} 
+R\+U\+N\+N\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT@{EXIT}!model.h@{model.h}}\index{model.h@{model.h}!EXIT@{EXIT}}}\mbox{\Hypertarget{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca7a10b5d68d31711288e1fe0fa17dbf4f}\label{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca7a10b5d68d31711288e1fe0fa17dbf4f}} 
+E\+X\+IT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{model_8h_aff10aec7cc06629594d351d947dbbaa5}\label{model_8h_aff10aec7cc06629594d351d947dbbaa5}} 
+\index{model.h@{model.h}!destroySprites@{destroySprites}}
+\index{destroySprites@{destroySprites}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{destroySprites()}{destroySprites()}}
+{\footnotesize\ttfamily void destroy\+Sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+frees the memory of every sprite used in the game using the method destroy\+Sprite from sprite.\+h file 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{model_8h_aff10aec7cc06629594d351d947dbbaa5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_aff10aec7cc06629594d351d947dbbaa5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_ac568ae681f60f548a92452e071667544}\label{model_8h_ac568ae681f60f548a92452e071667544}} 
+\index{model.h@{model.h}!setupSprites@{setupSprites}}
+\index{setupSprites@{setupSprites}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{setupSprites()}{setupSprites()}}
+{\footnotesize\ttfamily void setup\+Sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creates every sprite used in the game using the method create\+Sprite from sprite.\+h file 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{model_8h_ac568ae681f60f548a92452e071667544_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_ac568ae681f60f548a92452e071667544_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_ae68939cf468635ca6f6e4415e876fb89}\label{model_8h_ae68939cf468635ca6f6e4415e876fb89}} 
+\index{model.h@{model.h}!updateKeyboardState@{updateKeyboardState}}
+\index{updateKeyboardState@{updateKeyboardState}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{updateKeyboardState()}{updateKeyboardState()}}
+{\footnotesize\ttfamily void update\+Keyboard\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function uses \char`\"{}state machines\char`\"{} to detect where the game is at the moment and uses the keyboard to check the pressed keys in order to change the states of the game 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_ae68939cf468635ca6f6e4415e876fb89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{model_8h_ae68939cf468635ca6f6e4415e876fb89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_a3a151327b39d8c3314bca0f254f8dd6d}\label{model_8h_a3a151327b39d8c3314bca0f254f8dd6d}} 
+\index{model.h@{model.h}!updateMouseState@{updateMouseState}}
+\index{updateMouseState@{updateMouseState}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{updateMouseState()}{updateMouseState()}}
+{\footnotesize\ttfamily void update\+Mouse\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this fuction is responsable for interpreting the mouse movement and clicks, and update the mouse parameters 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_a3a151327b39d8c3314bca0f254f8dd6d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{model_8h_a3a151327b39d8c3314bca0f254f8dd6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_a91f146a53c511245f78f9e55e7ffb36b}\label{model_8h_a91f146a53c511245f78f9e55e7ffb36b}} 
+\index{model.h@{model.h}!updateStates@{updateStates}}
+\index{updateStates@{updateStates}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{updateStates()}{updateStates()}}
+{\footnotesize\ttfamily void update\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function interprets the mouse clicks in the screen in order to change the \char`\"{}state machines\char`\"{} in some way 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8h_a91f146a53c511245f78f9e55e7ffb36b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8h_ada1f75d308dd269c459abd78814c464a}\label{model_8h_ada1f75d308dd269c459abd78814c464a}} 
+\index{model.h@{model.h}!updateTimerState@{updateTimerState}}
+\index{updateTimerState@{updateTimerState}!model.h@{model.h}}
+\doxysubsubsection{\texorpdfstring{updateTimerState()}{updateTimerState()}}
+{\footnotesize\ttfamily int update\+Timer\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsible for calling the method flip\+Buffers at each timer interruption and that allows to have double buffering into the game and for having a counter so we can use it to do time stuff too 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{model_8h_ada1f75d308dd269c459abd78814c464a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{model_8h_ada1f75d308dd269c459abd78814c464a_icgraph}
+\end{center}
+\end{figure}

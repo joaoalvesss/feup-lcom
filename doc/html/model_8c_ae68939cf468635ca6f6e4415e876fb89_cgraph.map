@@ -1,0 +1,6 @@
+<map id="updateKeyboardState" name="updateKeyboardState">
+<area shape="rect" id="node1" title="this function uses &quot;state machines&quot; to detect where the game is at the moment and uses the keyboard t..." alt="" coords="5,42,168,69"/>
+<area shape="rect" id="node2" href="$keyboard_8c.html#aae0497df68cd37731baf61c8f0677540" title="this function reads the current status of the mouse or keyboard" alt="" coords="216,35,385,76"/>
+<area shape="rect" id="node3" href="$keyboard_8c.html#a4005db640c1167c3498e8c534382a894" title="this function reads the current status of the mouse or keyboard" alt="" coords="433,5,603,47"/>
+<area shape="rect" id="node4" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="651,42,749,69"/>
+</map>

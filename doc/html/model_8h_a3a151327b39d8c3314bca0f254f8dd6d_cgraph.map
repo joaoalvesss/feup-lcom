@@ -1,0 +1,9 @@
+<map id="updateMouseState" name="updateMouseState">
+<area shape="rect" id="node1" title="this fuction is responsable for interpreting the mouse movement and clicks, and update the mouse para..." alt="" coords="5,93,149,120"/>
+<area shape="rect" id="node2" href="$mouse_8c.html#ae35d8e95b82497f86a9cdc5277df62b8" title="responsable to detect mouse position and write the position to the byte array of the mouse so parse_p..." alt="" coords="215,5,349,32"/>
+<area shape="rect" id="node3" href="$keyboard_8c.html#aae0497df68cd37731baf61c8f0677540" title="this function reads the current status of the mouse or keyboard" alt="" coords="197,57,367,98"/>
+<area shape="rect" id="node6" href="$mouse_8c.html#a626208129dd9f0b0dacc816aab4c784c" title="writes the mouse values into a struct MouseHelper, so its easier to use the mouse as the struct has o..." alt="" coords="228,123,336,149"/>
+<area shape="rect" id="node7" href="$model_8c.html#a91f146a53c511245f78f9e55e7ffb36b" title="this function interprets the mouse clicks in the screen in order to change the &quot;state machines&quot; in so..." alt="" coords="228,173,336,200"/>
+<area shape="rect" id="node4" href="$keyboard_8c.html#a4005db640c1167c3498e8c534382a894" title="this function reads the current status of the mouse or keyboard" alt="" coords="415,27,584,69"/>
+<area shape="rect" id="node5" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="632,64,731,91"/>
+</map>

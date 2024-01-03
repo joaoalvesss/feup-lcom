@@ -1,0 +1,4 @@
+<map id="setupSprites" name="setupSprites">
+<area shape="rect" id="node1" title="creates every sprite used in the game using the method createSprite from sprite.h file" alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$sprites_8c.html#a6c5f813a7c41430ff5a2caf595daedfa" title="this class adpated function creates a sprite object" alt="" coords="156,5,257,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="keyboard_mouse_read_status" name="keyboard_mouse_read_status">
+<area shape="rect" id="node1" title="this function reads the current status of the mouse or keyboard" alt="" coords="5,5,175,47"/>
+<area shape="rect" id="node2" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="223,13,321,39"/>
+</map>

@@ -1,0 +1,1137 @@
+\hypertarget{view_8c}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/view/view.c File Reference}
+\label{view_8c}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/view/view.c@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/view/view.c}}
+{\ttfamily \#include \char`\"{}view.\+h\char`\"{}}\newline
+Include dependency graph for view.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{view_8c_af396c2c91130bb3a965d7de0881d6fbe}{setup\+Animation}} ()
+\item 
+void \mbox{\hyperlink{view_8c_a96bb8c3bba5beaeb6905e1446bd469cb}{initialize\+Background\+Frames}} (int size)
+\item 
+void \mbox{\hyperlink{view_8c_aea25b6a4c32512ab95df8d6084b1f535}{setup\+Frames}} ()
+\item 
+void \mbox{\hyperlink{view_8c_a10dc0094d88befe86dd5990628f382f3}{draw\+New\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em using a state machine this function detects whenever a state is changed and if so, a new screen will be loaded \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a15a9e4278686eb27a82c9758b018c2cd}{draw\+Start\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the main menu sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a5105484162fd30fa5ff587215ed69d73}{draw\+Frames}} (int i)
+\begin{DoxyCompactList}\small\item\em create the \char`\"{}animation\char`\"{} of the dinossaur image (the back part of the cards), the \char`\"{}animation\char`\"{} is created having three xpms and alternating between them \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_aa4f56964a2bcd69024d3a8cd0d74e702}{change\+Frame}} (int i)
+\begin{DoxyCompactList}\small\item\em responsible for changing the current sprite that is being displayed in the back part of the cards to the next sprite in order to create the \char`\"{}animation\char`\"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a292a3b997aaab446dcb392b24493ca77}{draw\+Easy\+Game}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the a game with easy difficulty (4 by 2 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a9288ab4bd242edb3273fcde58e48aa56}{draw\+Medium\+Game}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the a game with medium difficulty (4 by 3 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a811ec2b7dab4374f0307023df122c58b}{draw\+Hard\+Game}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the a game with hard difficulty (4 by 4 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_a7880fecdee602199b26433132ae89894}{draw\+End\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsable of drawing the end game menu sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8c_aab7430a217db9969c46ead48adffbd05}{draw\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em this fuction is responsable of drawing the mouse into all menus, and detecting if the mouse is hover some button and changing the sprite that is being drawn \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a14d0fff881f78f4b621ebed6bb9b890f}{flip\+Buffers}} ()
+\begin{DoxyCompactList}\small\item\em this function copies the content of the first buffer to second buffer in order to allow the double buffering by memory copy \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a8f7f58314c6c6348e3bcd7f36fca6a87}{draw\+Sprite\+Xpm}} (\mbox{\hyperlink{structSprite}{Sprite}} $\ast$sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em draws the image given at the coords of the screen given \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_aa349fdcbc9b3263b4ad1add7c91441d9}{set\+Buffers}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em set the buffers in order to use double buffering to avoid flickers in the game \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a58b298426f1af79878e50b55092dcdf3}{flip\+\_\+card}} (uint8\+\_\+t card)
+\begin{DoxyCompactList}\small\item\em responsable for flipping the cards to show their content \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_aba001e5d60ec495c70804e0aed1aa06b}{unflip\+\_\+card}} (uint8\+\_\+t card)
+\begin{DoxyCompactList}\small\item\em responsable for flipping the cards to hide their content \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a231e4dd52378c7442957e86cb5547465}{game}} ()
+\begin{DoxyCompactList}\small\item\em this function reads the current states and makes actions accordingly, such as printing a new frame, or in-\/game actions such as selecting and turning cards \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a70929694baa82ac490dbf80cf91b0ae6}{game\+\_\+setup}} ()
+\begin{DoxyCompactList}\small\item\em this function creates a random card board for the game to work on, depending on difficulty. It also resets some states so that the game becomes ready to play \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_aa87a087be2de23a2f5d05ed2daa006d7}{select\+\_\+card}} (int n)
+\begin{DoxyCompactList}\small\item\em changes the card bits in order to know its position and the type of the card \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a5abe26562fa98b90f366b0ebe29096c3}{display\+\_\+time}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em this function draws the game screen timer given the coords \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8c_a7323e399bcd0931d665010acb8197848}{display\+Digit}} (uint32\+\_\+t digit, int x, int y)
+\begin{DoxyCompactList}\small\item\em this function draws a digit given the digit number and the coords \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{view_8c_a29412127a90b0182e9e32fdea24af157}{first\+Buffer}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{view_8c_afdd3ece1a649590c30712859481cf383}{second\+Buffer}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{view_8c_aaa315b42faeb5c50cdd8a53f65fd1b9e}{third\+Buffer}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{view_8c_acbcf06734c4ed387e4a71cdb6e1fe125}{buffer\+Size}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{view_8c_a1eec546f406e03babcc512063faf2adc}{table}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{view_8c_aa1af65d1229aa95147fd82f5fc76bab5}{card1}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{view_8c_a770902f768fcb62f6a063934ad0ecabf}{card2}} = 0
+\item 
+int \mbox{\hyperlink{view_8c_ab7066de5a3495b1aab8b8e9801bfcd46}{frame\+\_\+x\+\_\+movment}} = 0
+\item 
+int \mbox{\hyperlink{view_8c_a4519f2958549e94412e27b00addeb415}{frame\+\_\+y\+\_\+movment}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{view_8c_a1df9fa0b15988a1c54218a58d36909e4}{cards\+\_\+flipped}} \mbox{[}16\mbox{]}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{view_8c_ad6835488a133262b9dbb5d020b912b53}{m\+\_\+info}}
+\item 
+struct packet \mbox{\hyperlink{view_8c_a50b0d83b7848a46c392534b359aaf81a}{packet\+\_\+mouse}}
+\item 
+\mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}{Menu}} \mbox{\hyperlink{view_8c_acd73e621715f6206cb3df9cd7933a491}{men\+State}}
+\item 
+\mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \mbox{\hyperlink{view_8c_aa43770ca0b61ba59803328cd908d8cd3}{dif\+State}}
+\item 
+\mbox{\hyperlink{structMouseHelper}{Mouse\+Helper}} \mbox{\hyperlink{view_8c_aca432cd93b9b3c8eda2fa9348a473b2e}{mouse\+Helper}}
+\item 
+\mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}{Frame}} \mbox{\hyperlink{view_8c_ac6719a3315e160835d6f40f7526d1b2b}{frame\+State}}
+\item 
+\mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}{Setup}} \mbox{\hyperlink{view_8c_a22ebb7dbd8035fd710cf404dd103c52a}{setup\+State}}
+\item 
+\mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8}{Game\+Phase}} \mbox{\hyperlink{view_8c_a0bf8d5630d25491480bcf41f44bd5d98}{game\+Phase}}
+\item 
+bool \mbox{\hyperlink{view_8c_a1ffad002778000343e5ba14a25b5287f}{card\+Selected}}
+\item 
+int \mbox{\hyperlink{view_8c_a6e85223fcd11d3cf3a1fff5b211332de}{timer\+\_\+count}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a481f0b7279820430e972548a1dca4206}{back1}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_abd04a2065781a609fc4df7db7ab8820d}{back2}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a0c0f74f2b201c529cfd234450278c10c}{back3}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_acf91042f48520edee3ff230bbaffe83a}{dino1}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_ac5b36bf420c6053ce56b8f864d73b38e}{dino2}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a5470ac2ca861adac166f6f06156e1330}{dino3}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_afb684f27533fc4c7c582b077ae4882e5}{dino4}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a2fb9ba07cd63b0519b79e04473164655}{dino5}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a0268547492dee638ffff005352caf8f2}{dino6}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a7587a6777e0f349b57d29575f8a5f07e}{dino7}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a63e05b2c2a0a9b2b05d78bab8f14ce5d}{dino8}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a61d0c7fc9d9720d2ceb8044442cc3806}{colon}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a481f62f2617feed5035eab000bd88cb7}{digit0}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a4062ded413aafd2aa16cbb135c0a99b7}{digit1}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_afd6d432cb6892d055c22d6bcf4b6435f}{digit2}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a79cbe5042a8c335b0749bcbc41295742}{digit3}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a0f27c7ccfc95e8845d969caf906ce8f9}{digit4}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_abc01c4432bc0b176375518e1cab84a7a}{digit5}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_aae07c9c4597725d69fae05145ca319a8}{digit6}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_aef2162f2d5abeb6c9647345880fbc142}{digit7}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a2bb0d5a3165a598a6b4675bb8e0d329d}{digit8}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a923d536561d1104a0e3bd5fee5bec7ff}{digit9}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_ad7ddf6054c024b65059bb8ef3bf45ad0}{mainmenu}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a4afef7fac8cfb8377a950142098d2eef}{menufinal}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a69a7242ee147decd9b827b0c721a728c}{background}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a78813029dbbef11099445e377a62f594}{dino\+\_\+mouse}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_a7e106c384127c9b2052c91f0ac6b961d}{frame}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{view_8c_ad5f73e716b860186d2166cf1208b377c}{dino\+\_\+cursor}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$$\ast$ \mbox{\hyperlink{view_8c_a33b8975d1030430e8ce861f9c8ef80f9}{background\+Frames}} = N\+U\+LL
+\item 
+int \mbox{\hyperlink{view_8c_a37726571bfdad275d6ca5a8c51e3de21}{num\+Background\+Frames}} = 0
+\item 
+int \mbox{\hyperlink{view_8c_a3630bf437dd7e4cdb00f43e8353cd540}{current\+Frame\+Index}} = 0
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$$\ast$ \mbox{\hyperlink{view_8c_a54190d1dd3de4ba731ed2b6df1b9fb5f}{animation}} =N\+U\+LL
+\item 
+bool \mbox{\hyperlink{view_8c_a063b033095d66a781d7ecd123ca4aa30}{setup\+Done}} =false
+\item 
+int \mbox{\hyperlink{view_8c_a423f226982e21941f55fd3d632bd810c}{frame\+Counter}} =0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{view_8c_a42ff89d25c12a3302f87202d760ac1df}{start\+\_\+time}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{view_8c_af6afb1669ff91f5213ecb926fe2336a0}{pause\+\_\+time}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{view_8c_af3ad07dbcda12aa857fe4a025afb7dd2}{pairs}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{view_8c_a659e9eb6fbed575191bcbd8521623ac8}{pairs\+\_\+completed}}
+\item 
+int \mbox{\hyperlink{view_8c_ab49a8524f6fb3754b36d6bac1f67a71b}{selected\+\_\+position}}
+\item 
+int \mbox{\hyperlink{view_8c_ab6c7e61a3bc6a69d044d9bfbedfa77b4}{first\+\_\+card\+\_\+position}}
+\item 
+int \mbox{\hyperlink{view_8c_ad27a889aafce89564aa9e3055e942f39}{game\+Timer}} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{view_8c_aa4f56964a2bcd69024d3a8cd0d74e702}\label{view_8c_aa4f56964a2bcd69024d3a8cd0d74e702}} 
+\index{view.c@{view.c}!changeFrame@{changeFrame}}
+\index{changeFrame@{changeFrame}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{changeFrame()}{changeFrame()}}
+{\footnotesize\ttfamily void change\+Frame (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+responsible for changing the current sprite that is being displayed in the back part of the cards to the next sprite in order to create the \char`\"{}animation\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & in the three images that represent the \char`\"{}animation\char`\"{}, i represents the number of the image that will be displayed next \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_aa4f56964a2bcd69024d3a8cd0d74e702_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a5abe26562fa98b90f366b0ebe29096c3}\label{view_8c_a5abe26562fa98b90f366b0ebe29096c3}} 
+\index{view.c@{view.c}!display\_time@{display\_time}}
+\index{display\_time@{display\_time}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{display\_time()}{display\_time()}}
+{\footnotesize\ttfamily int display\+\_\+time (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+this function draws the game screen timer given the coords 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & is the x coordenad where it draws the timer \\
+\hline
+{\em y} & is the y coordenad where it draws the timer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything goes well, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a5abe26562fa98b90f366b0ebe29096c3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a5abe26562fa98b90f366b0ebe29096c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a7323e399bcd0931d665010acb8197848}\label{view_8c_a7323e399bcd0931d665010acb8197848}} 
+\index{view.c@{view.c}!displayDigit@{displayDigit}}
+\index{displayDigit@{displayDigit}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{displayDigit()}{displayDigit()}}
+{\footnotesize\ttfamily int display\+Digit (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{digit,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+this function draws a digit given the digit number and the coords 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digit} & is the number from 0 to 9 that is used to determine which digit to draw \\
+\hline
+{\em x} & is the x coordenad where it draws the digit \\
+\hline
+{\em y} & is the y coordenad where it draws the digit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything goes well, 1 otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a7323e399bcd0931d665010acb8197848_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a7323e399bcd0931d665010acb8197848_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a292a3b997aaab446dcb392b24493ca77}\label{view_8c_a292a3b997aaab446dcb392b24493ca77}} 
+\index{view.c@{view.c}!drawEasyGame@{drawEasyGame}}
+\index{drawEasyGame@{drawEasyGame}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawEasyGame()}{drawEasyGame()}}
+{\footnotesize\ttfamily void draw\+Easy\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the a game with easy difficulty (4 by 2 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a292a3b997aaab446dcb392b24493ca77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a292a3b997aaab446dcb392b24493ca77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a7880fecdee602199b26433132ae89894}\label{view_8c_a7880fecdee602199b26433132ae89894}} 
+\index{view.c@{view.c}!drawEndMenu@{drawEndMenu}}
+\index{drawEndMenu@{drawEndMenu}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawEndMenu()}{drawEndMenu()}}
+{\footnotesize\ttfamily void draw\+End\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the end game menu sprite 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a7880fecdee602199b26433132ae89894_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a7880fecdee602199b26433132ae89894_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a5105484162fd30fa5ff587215ed69d73}\label{view_8c_a5105484162fd30fa5ff587215ed69d73}} 
+\index{view.c@{view.c}!drawFrames@{drawFrames}}
+\index{drawFrames@{drawFrames}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawFrames()}{drawFrames()}}
+{\footnotesize\ttfamily void draw\+Frames (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+create the \char`\"{}animation\char`\"{} of the dinossaur image (the back part of the cards), the \char`\"{}animation\char`\"{} is created having three xpms and alternating between them 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & the amount of frames that will be drawn depending on the difficulty selected \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a5105484162fd30fa5ff587215ed69d73_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a5105484162fd30fa5ff587215ed69d73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a811ec2b7dab4374f0307023df122c58b}\label{view_8c_a811ec2b7dab4374f0307023df122c58b}} 
+\index{view.c@{view.c}!drawHardGame@{drawHardGame}}
+\index{drawHardGame@{drawHardGame}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawHardGame()}{drawHardGame()}}
+{\footnotesize\ttfamily void draw\+Hard\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the a game with hard difficulty (4 by 4 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a811ec2b7dab4374f0307023df122c58b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a811ec2b7dab4374f0307023df122c58b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a9288ab4bd242edb3273fcde58e48aa56}\label{view_8c_a9288ab4bd242edb3273fcde58e48aa56}} 
+\index{view.c@{view.c}!drawMediumGame@{drawMediumGame}}
+\index{drawMediumGame@{drawMediumGame}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawMediumGame()}{drawMediumGame()}}
+{\footnotesize\ttfamily void draw\+Medium\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the a game with medium difficulty (4 by 3 card grid) and the frame around the cards so when playing with keyboard the user can identify the selected card at the moment 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a9288ab4bd242edb3273fcde58e48aa56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a9288ab4bd242edb3273fcde58e48aa56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_aab7430a217db9969c46ead48adffbd05}\label{view_8c_aab7430a217db9969c46ead48adffbd05}} 
+\index{view.c@{view.c}!drawMouse@{drawMouse}}
+\index{drawMouse@{drawMouse}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawMouse()}{drawMouse()}}
+{\footnotesize\ttfamily void draw\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this fuction is responsable of drawing the mouse into all menus, and detecting if the mouse is hover some button and changing the sprite that is being drawn 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_aab7430a217db9969c46ead48adffbd05_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_aab7430a217db9969c46ead48adffbd05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a10dc0094d88befe86dd5990628f382f3}\label{view_8c_a10dc0094d88befe86dd5990628f382f3}} 
+\index{view.c@{view.c}!drawNewFrame@{drawNewFrame}}
+\index{drawNewFrame@{drawNewFrame}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawNewFrame()}{drawNewFrame()}}
+{\footnotesize\ttfamily void draw\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+using a state machine this function detects whenever a state is changed and if so, a new screen will be loaded 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a10dc0094d88befe86dd5990628f382f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a10dc0094d88befe86dd5990628f382f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a8f7f58314c6c6348e3bcd7f36fca6a87}\label{view_8c_a8f7f58314c6c6348e3bcd7f36fca6a87}} 
+\index{view.c@{view.c}!drawSpriteXpm@{drawSpriteXpm}}
+\index{drawSpriteXpm@{drawSpriteXpm}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawSpriteXpm()}{drawSpriteXpm()}}
+{\footnotesize\ttfamily int draw\+Sprite\+Xpm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSprite}{Sprite}} $\ast$}]{sprite,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+draws the image given at the coords of the screen given 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & the image that we want to draw \\
+\hline
+{\em x} & the screen width of where we want to draw the sprite \\
+\hline
+{\em y} & the screen height of where we want to draw the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{view_8c_a8f7f58314c6c6348e3bcd7f36fca6a87_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a8f7f58314c6c6348e3bcd7f36fca6a87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a15a9e4278686eb27a82c9758b018c2cd}\label{view_8c_a15a9e4278686eb27a82c9758b018c2cd}} 
+\index{view.c@{view.c}!drawStartMenu@{drawStartMenu}}
+\index{drawStartMenu@{drawStartMenu}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{drawStartMenu()}{drawStartMenu()}}
+{\footnotesize\ttfamily void draw\+Start\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsable of drawing the main menu sprite 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a15a9e4278686eb27a82c9758b018c2cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a15a9e4278686eb27a82c9758b018c2cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a58b298426f1af79878e50b55092dcdf3}\label{view_8c_a58b298426f1af79878e50b55092dcdf3}} 
+\index{view.c@{view.c}!flip\_card@{flip\_card}}
+\index{flip\_card@{flip\_card}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{flip\_card()}{flip\_card()}}
+{\footnotesize\ttfamily int flip\+\_\+card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card }\end{DoxyParamCaption})}
+
+
+
+responsable for flipping the cards to show their content 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & in the form xxyy1nnn, where xx represents the position on the x axis, y on the y axis, and nnn is the card type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if card was flipped with success, 1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{view_8c_a58b298426f1af79878e50b55092dcdf3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a14d0fff881f78f4b621ebed6bb9b890f}\label{view_8c_a14d0fff881f78f4b621ebed6bb9b890f}} 
+\index{view.c@{view.c}!flipBuffers@{flipBuffers}}
+\index{flipBuffers@{flipBuffers}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{flipBuffers()}{flipBuffers()}}
+{\footnotesize\ttfamily int flip\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function copies the content of the first buffer to second buffer in order to allow the double buffering by memory copy 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success, otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a14d0fff881f78f4b621ebed6bb9b890f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a231e4dd52378c7442957e86cb5547465}\label{view_8c_a231e4dd52378c7442957e86cb5547465}} 
+\index{view.c@{view.c}!game@{game}}
+\index{game@{game}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{game()}{game()}}
+{\footnotesize\ttfamily int game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function reads the current states and makes actions accordingly, such as printing a new frame, or in-\/game actions such as selecting and turning cards 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything gone correct otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a231e4dd52378c7442957e86cb5547465_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{view_8c_a231e4dd52378c7442957e86cb5547465_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a70929694baa82ac490dbf80cf91b0ae6}\label{view_8c_a70929694baa82ac490dbf80cf91b0ae6}} 
+\index{view.c@{view.c}!game\_setup@{game\_setup}}
+\index{game\_setup@{game\_setup}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{game\_setup()}{game\_setup()}}
+{\footnotesize\ttfamily int game\+\_\+setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function creates a random card board for the game to work on, depending on difficulty. It also resets some states so that the game becomes ready to play 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if everything goes well, 1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a70929694baa82ac490dbf80cf91b0ae6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_a96bb8c3bba5beaeb6905e1446bd469cb}\label{view_8c_a96bb8c3bba5beaeb6905e1446bd469cb}} 
+\index{view.c@{view.c}!initializeBackgroundFrames@{initializeBackgroundFrames}}
+\index{initializeBackgroundFrames@{initializeBackgroundFrames}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{initializeBackgroundFrames()}{initializeBackgroundFrames()}}
+{\footnotesize\ttfamily void initialize\+Background\+Frames (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_a96bb8c3bba5beaeb6905e1446bd469cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_aa87a087be2de23a2f5d05ed2daa006d7}\label{view_8c_aa87a087be2de23a2f5d05ed2daa006d7}} 
+\index{view.c@{view.c}!select\_card@{select\_card}}
+\index{select\_card@{select\_card}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{select\_card()}{select\_card()}}
+{\footnotesize\ttfamily int select\+\_\+card (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+changes the card bits in order to know its position and the type of the card 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & 1 or 2 depending on it being the first or the second selected by the user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success, 1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_aa87a087be2de23a2f5d05ed2daa006d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_aa349fdcbc9b3263b4ad1add7c91441d9}\label{view_8c_aa349fdcbc9b3263b4ad1add7c91441d9}} 
+\index{view.c@{view.c}!setBuffers@{setBuffers}}
+\index{setBuffers@{setBuffers}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{setBuffers()}{setBuffers()}}
+{\footnotesize\ttfamily int set\+Buffers (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+set the buffers in order to use double buffering to avoid flickers in the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & passed to know the buffer size needed to the mode selected so only the needed memory will be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if sucess, otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{view_8c_aa349fdcbc9b3263b4ad1add7c91441d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_aa349fdcbc9b3263b4ad1add7c91441d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_af396c2c91130bb3a965d7de0881d6fbe}\label{view_8c_af396c2c91130bb3a965d7de0881d6fbe}} 
+\index{view.c@{view.c}!setupAnimation@{setupAnimation}}
+\index{setupAnimation@{setupAnimation}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{setupAnimation()}{setupAnimation()}}
+{\footnotesize\ttfamily void setup\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_af396c2c91130bb3a965d7de0881d6fbe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_aea25b6a4c32512ab95df8d6084b1f535}\label{view_8c_aea25b6a4c32512ab95df8d6084b1f535}} 
+\index{view.c@{view.c}!setupFrames@{setupFrames}}
+\index{setupFrames@{setupFrames}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{setupFrames()}{setupFrames()}}
+{\footnotesize\ttfamily void setup\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{view_8c_aea25b6a4c32512ab95df8d6084b1f535_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_aea25b6a4c32512ab95df8d6084b1f535_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{view_8c_aba001e5d60ec495c70804e0aed1aa06b}\label{view_8c_aba001e5d60ec495c70804e0aed1aa06b}} 
+\index{view.c@{view.c}!unflip\_card@{unflip\_card}}
+\index{unflip\_card@{unflip\_card}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{unflip\_card()}{unflip\_card()}}
+{\footnotesize\ttfamily int unflip\+\_\+card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card }\end{DoxyParamCaption})}
+
+
+
+responsable for flipping the cards to hide their content 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & in the form xxyy1nnn, where xx represents the position on the x axis, y on the y axis, and nnn is the card type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: 0 if card was unflipped sucess, 1 otherwise ~\newline
+ 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8c_aba001e5d60ec495c70804e0aed1aa06b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{view_8c_a54190d1dd3de4ba731ed2b6df1b9fb5f}\label{view_8c_a54190d1dd3de4ba731ed2b6df1b9fb5f}} 
+\index{view.c@{view.c}!animation@{animation}}
+\index{animation@{animation}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{animation}{animation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$$\ast$ animation =N\+U\+LL}
+
+\mbox{\Hypertarget{view_8c_a481f0b7279820430e972548a1dca4206}\label{view_8c_a481f0b7279820430e972548a1dca4206}} 
+\index{view.c@{view.c}!back1@{back1}}
+\index{back1@{back1}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{back1}{back1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ back1}
+
+\mbox{\Hypertarget{view_8c_abd04a2065781a609fc4df7db7ab8820d}\label{view_8c_abd04a2065781a609fc4df7db7ab8820d}} 
+\index{view.c@{view.c}!back2@{back2}}
+\index{back2@{back2}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{back2}{back2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ back2}
+
+\mbox{\Hypertarget{view_8c_a0c0f74f2b201c529cfd234450278c10c}\label{view_8c_a0c0f74f2b201c529cfd234450278c10c}} 
+\index{view.c@{view.c}!back3@{back3}}
+\index{back3@{back3}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{back3}{back3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ back3}
+
+\mbox{\Hypertarget{view_8c_a69a7242ee147decd9b827b0c721a728c}\label{view_8c_a69a7242ee147decd9b827b0c721a728c}} 
+\index{view.c@{view.c}!background@{background}}
+\index{background@{background}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ background}
+
+\mbox{\Hypertarget{view_8c_a33b8975d1030430e8ce861f9c8ef80f9}\label{view_8c_a33b8975d1030430e8ce861f9c8ef80f9}} 
+\index{view.c@{view.c}!backgroundFrames@{backgroundFrames}}
+\index{backgroundFrames@{backgroundFrames}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{backgroundFrames}{backgroundFrames}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$$\ast$ background\+Frames = N\+U\+LL}
+
+\mbox{\Hypertarget{view_8c_acbcf06734c4ed387e4a71cdb6e1fe125}\label{view_8c_acbcf06734c4ed387e4a71cdb6e1fe125}} 
+\index{view.c@{view.c}!bufferSize@{bufferSize}}
+\index{bufferSize@{bufferSize}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{bufferSize}{bufferSize}}
+{\footnotesize\ttfamily uint32\+\_\+t buffer\+Size}
+
+\mbox{\Hypertarget{view_8c_aa1af65d1229aa95147fd82f5fc76bab5}\label{view_8c_aa1af65d1229aa95147fd82f5fc76bab5}} 
+\index{view.c@{view.c}!card1@{card1}}
+\index{card1@{card1}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{card1}{card1}}
+{\footnotesize\ttfamily uint8\+\_\+t card1 = 0}
+
+\mbox{\Hypertarget{view_8c_a770902f768fcb62f6a063934ad0ecabf}\label{view_8c_a770902f768fcb62f6a063934ad0ecabf}} 
+\index{view.c@{view.c}!card2@{card2}}
+\index{card2@{card2}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{card2}{card2}}
+{\footnotesize\ttfamily uint8\+\_\+t card2 = 0}
+
+\mbox{\Hypertarget{view_8c_a1df9fa0b15988a1c54218a58d36909e4}\label{view_8c_a1df9fa0b15988a1c54218a58d36909e4}} 
+\index{view.c@{view.c}!cards\_flipped@{cards\_flipped}}
+\index{cards\_flipped@{cards\_flipped}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{cards\_flipped}{cards\_flipped}}
+{\footnotesize\ttfamily uint8\+\_\+t cards\+\_\+flipped\mbox{[}16\mbox{]}}
+
+\mbox{\Hypertarget{view_8c_a1ffad002778000343e5ba14a25b5287f}\label{view_8c_a1ffad002778000343e5ba14a25b5287f}} 
+\index{view.c@{view.c}!cardSelected@{cardSelected}}
+\index{cardSelected@{cardSelected}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{cardSelected}{cardSelected}}
+{\footnotesize\ttfamily bool card\+Selected}
+
+\mbox{\Hypertarget{view_8c_a61d0c7fc9d9720d2ceb8044442cc3806}\label{view_8c_a61d0c7fc9d9720d2ceb8044442cc3806}} 
+\index{view.c@{view.c}!colon@{colon}}
+\index{colon@{colon}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{colon}{colon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ colon}
+
+\mbox{\Hypertarget{view_8c_a3630bf437dd7e4cdb00f43e8353cd540}\label{view_8c_a3630bf437dd7e4cdb00f43e8353cd540}} 
+\index{view.c@{view.c}!currentFrameIndex@{currentFrameIndex}}
+\index{currentFrameIndex@{currentFrameIndex}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{currentFrameIndex}{currentFrameIndex}}
+{\footnotesize\ttfamily int current\+Frame\+Index = 0}
+
+\mbox{\Hypertarget{view_8c_aa43770ca0b61ba59803328cd908d8cd3}\label{view_8c_aa43770ca0b61ba59803328cd908d8cd3}} 
+\index{view.c@{view.c}!difState@{difState}}
+\index{difState@{difState}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{difState}{difState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} dif\+State}
+
+\mbox{\Hypertarget{view_8c_a481f62f2617feed5035eab000bd88cb7}\label{view_8c_a481f62f2617feed5035eab000bd88cb7}} 
+\index{view.c@{view.c}!digit0@{digit0}}
+\index{digit0@{digit0}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit0}{digit0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit0}
+
+\mbox{\Hypertarget{view_8c_a4062ded413aafd2aa16cbb135c0a99b7}\label{view_8c_a4062ded413aafd2aa16cbb135c0a99b7}} 
+\index{view.c@{view.c}!digit1@{digit1}}
+\index{digit1@{digit1}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit1}{digit1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit1}
+
+\mbox{\Hypertarget{view_8c_afd6d432cb6892d055c22d6bcf4b6435f}\label{view_8c_afd6d432cb6892d055c22d6bcf4b6435f}} 
+\index{view.c@{view.c}!digit2@{digit2}}
+\index{digit2@{digit2}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit2}{digit2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit2}
+
+\mbox{\Hypertarget{view_8c_a79cbe5042a8c335b0749bcbc41295742}\label{view_8c_a79cbe5042a8c335b0749bcbc41295742}} 
+\index{view.c@{view.c}!digit3@{digit3}}
+\index{digit3@{digit3}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit3}{digit3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit3}
+
+\mbox{\Hypertarget{view_8c_a0f27c7ccfc95e8845d969caf906ce8f9}\label{view_8c_a0f27c7ccfc95e8845d969caf906ce8f9}} 
+\index{view.c@{view.c}!digit4@{digit4}}
+\index{digit4@{digit4}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit4}{digit4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit4}
+
+\mbox{\Hypertarget{view_8c_abc01c4432bc0b176375518e1cab84a7a}\label{view_8c_abc01c4432bc0b176375518e1cab84a7a}} 
+\index{view.c@{view.c}!digit5@{digit5}}
+\index{digit5@{digit5}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit5}{digit5}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit5}
+
+\mbox{\Hypertarget{view_8c_aae07c9c4597725d69fae05145ca319a8}\label{view_8c_aae07c9c4597725d69fae05145ca319a8}} 
+\index{view.c@{view.c}!digit6@{digit6}}
+\index{digit6@{digit6}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit6}{digit6}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit6}
+
+\mbox{\Hypertarget{view_8c_aef2162f2d5abeb6c9647345880fbc142}\label{view_8c_aef2162f2d5abeb6c9647345880fbc142}} 
+\index{view.c@{view.c}!digit7@{digit7}}
+\index{digit7@{digit7}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit7}{digit7}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit7}
+
+\mbox{\Hypertarget{view_8c_a2bb0d5a3165a598a6b4675bb8e0d329d}\label{view_8c_a2bb0d5a3165a598a6b4675bb8e0d329d}} 
+\index{view.c@{view.c}!digit8@{digit8}}
+\index{digit8@{digit8}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit8}{digit8}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit8}
+
+\mbox{\Hypertarget{view_8c_a923d536561d1104a0e3bd5fee5bec7ff}\label{view_8c_a923d536561d1104a0e3bd5fee5bec7ff}} 
+\index{view.c@{view.c}!digit9@{digit9}}
+\index{digit9@{digit9}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{digit9}{digit9}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit9}
+
+\mbox{\Hypertarget{view_8c_acf91042f48520edee3ff230bbaffe83a}\label{view_8c_acf91042f48520edee3ff230bbaffe83a}} 
+\index{view.c@{view.c}!dino1@{dino1}}
+\index{dino1@{dino1}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino1}{dino1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino1}
+
+\mbox{\Hypertarget{view_8c_ac5b36bf420c6053ce56b8f864d73b38e}\label{view_8c_ac5b36bf420c6053ce56b8f864d73b38e}} 
+\index{view.c@{view.c}!dino2@{dino2}}
+\index{dino2@{dino2}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino2}{dino2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino2}
+
+\mbox{\Hypertarget{view_8c_a5470ac2ca861adac166f6f06156e1330}\label{view_8c_a5470ac2ca861adac166f6f06156e1330}} 
+\index{view.c@{view.c}!dino3@{dino3}}
+\index{dino3@{dino3}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino3}{dino3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino3}
+
+\mbox{\Hypertarget{view_8c_afb684f27533fc4c7c582b077ae4882e5}\label{view_8c_afb684f27533fc4c7c582b077ae4882e5}} 
+\index{view.c@{view.c}!dino4@{dino4}}
+\index{dino4@{dino4}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino4}{dino4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino4}
+
+\mbox{\Hypertarget{view_8c_a2fb9ba07cd63b0519b79e04473164655}\label{view_8c_a2fb9ba07cd63b0519b79e04473164655}} 
+\index{view.c@{view.c}!dino5@{dino5}}
+\index{dino5@{dino5}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino5}{dino5}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino5}
+
+\mbox{\Hypertarget{view_8c_a0268547492dee638ffff005352caf8f2}\label{view_8c_a0268547492dee638ffff005352caf8f2}} 
+\index{view.c@{view.c}!dino6@{dino6}}
+\index{dino6@{dino6}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino6}{dino6}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino6}
+
+\mbox{\Hypertarget{view_8c_a7587a6777e0f349b57d29575f8a5f07e}\label{view_8c_a7587a6777e0f349b57d29575f8a5f07e}} 
+\index{view.c@{view.c}!dino7@{dino7}}
+\index{dino7@{dino7}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino7}{dino7}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino7}
+
+\mbox{\Hypertarget{view_8c_a63e05b2c2a0a9b2b05d78bab8f14ce5d}\label{view_8c_a63e05b2c2a0a9b2b05d78bab8f14ce5d}} 
+\index{view.c@{view.c}!dino8@{dino8}}
+\index{dino8@{dino8}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino8}{dino8}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino8}
+
+\mbox{\Hypertarget{view_8c_ad5f73e716b860186d2166cf1208b377c}\label{view_8c_ad5f73e716b860186d2166cf1208b377c}} 
+\index{view.c@{view.c}!dino\_cursor@{dino\_cursor}}
+\index{dino\_cursor@{dino\_cursor}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino\_cursor}{dino\_cursor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino\+\_\+cursor}
+
+\mbox{\Hypertarget{view_8c_a78813029dbbef11099445e377a62f594}\label{view_8c_a78813029dbbef11099445e377a62f594}} 
+\index{view.c@{view.c}!dino\_mouse@{dino\_mouse}}
+\index{dino\_mouse@{dino\_mouse}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{dino\_mouse}{dino\_mouse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino\+\_\+mouse}
+
+\mbox{\Hypertarget{view_8c_ab6c7e61a3bc6a69d044d9bfbedfa77b4}\label{view_8c_ab6c7e61a3bc6a69d044d9bfbedfa77b4}} 
+\index{view.c@{view.c}!first\_card\_position@{first\_card\_position}}
+\index{first\_card\_position@{first\_card\_position}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{first\_card\_position}{first\_card\_position}}
+{\footnotesize\ttfamily int first\+\_\+card\+\_\+position}
+
+\mbox{\Hypertarget{view_8c_a29412127a90b0182e9e32fdea24af157}\label{view_8c_a29412127a90b0182e9e32fdea24af157}} 
+\index{view.c@{view.c}!firstBuffer@{firstBuffer}}
+\index{firstBuffer@{firstBuffer}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{firstBuffer}{firstBuffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ first\+Buffer}
+
+\mbox{\Hypertarget{view_8c_a7e106c384127c9b2052c91f0ac6b961d}\label{view_8c_a7e106c384127c9b2052c91f0ac6b961d}} 
+\index{view.c@{view.c}!frame@{frame}}
+\index{frame@{frame}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ frame}
+
+\mbox{\Hypertarget{view_8c_ab7066de5a3495b1aab8b8e9801bfcd46}\label{view_8c_ab7066de5a3495b1aab8b8e9801bfcd46}} 
+\index{view.c@{view.c}!frame\_x\_movment@{frame\_x\_movment}}
+\index{frame\_x\_movment@{frame\_x\_movment}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{frame\_x\_movment}{frame\_x\_movment}}
+{\footnotesize\ttfamily int frame\+\_\+x\+\_\+movment = 0}
+
+\mbox{\Hypertarget{view_8c_a4519f2958549e94412e27b00addeb415}\label{view_8c_a4519f2958549e94412e27b00addeb415}} 
+\index{view.c@{view.c}!frame\_y\_movment@{frame\_y\_movment}}
+\index{frame\_y\_movment@{frame\_y\_movment}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{frame\_y\_movment}{frame\_y\_movment}}
+{\footnotesize\ttfamily int frame\+\_\+y\+\_\+movment = 0}
+
+\mbox{\Hypertarget{view_8c_a423f226982e21941f55fd3d632bd810c}\label{view_8c_a423f226982e21941f55fd3d632bd810c}} 
+\index{view.c@{view.c}!frameCounter@{frameCounter}}
+\index{frameCounter@{frameCounter}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{frameCounter}{frameCounter}}
+{\footnotesize\ttfamily int frame\+Counter =0}
+
+\mbox{\Hypertarget{view_8c_ac6719a3315e160835d6f40f7526d1b2b}\label{view_8c_ac6719a3315e160835d6f40f7526d1b2b}} 
+\index{view.c@{view.c}!frameState@{frameState}}
+\index{frameState@{frameState}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{frameState}{frameState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}{Frame}} frame\+State}
+
+\mbox{\Hypertarget{view_8c_a0bf8d5630d25491480bcf41f44bd5d98}\label{view_8c_a0bf8d5630d25491480bcf41f44bd5d98}} 
+\index{view.c@{view.c}!gamePhase@{gamePhase}}
+\index{gamePhase@{gamePhase}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{gamePhase}{gamePhase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8}{Game\+Phase}} game\+Phase}
+
+\mbox{\Hypertarget{view_8c_ad27a889aafce89564aa9e3055e942f39}\label{view_8c_ad27a889aafce89564aa9e3055e942f39}} 
+\index{view.c@{view.c}!gameTimer@{gameTimer}}
+\index{gameTimer@{gameTimer}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{gameTimer}{gameTimer}}
+{\footnotesize\ttfamily int game\+Timer =0}
+
+\mbox{\Hypertarget{view_8c_ad6835488a133262b9dbb5d020b912b53}\label{view_8c_ad6835488a133262b9dbb5d020b912b53}} 
+\index{view.c@{view.c}!m\_info@{m\_info}}
+\index{m\_info@{m\_info}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{m\_info}{m\_info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t m\+\_\+info}
+
+\mbox{\Hypertarget{view_8c_ad7ddf6054c024b65059bb8ef3bf45ad0}\label{view_8c_ad7ddf6054c024b65059bb8ef3bf45ad0}} 
+\index{view.c@{view.c}!mainmenu@{mainmenu}}
+\index{mainmenu@{mainmenu}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{mainmenu}{mainmenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ mainmenu}
+
+\mbox{\Hypertarget{view_8c_acd73e621715f6206cb3df9cd7933a491}\label{view_8c_acd73e621715f6206cb3df9cd7933a491}} 
+\index{view.c@{view.c}!menState@{menState}}
+\index{menState@{menState}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{menState}{menState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}{Menu}} men\+State}
+
+\mbox{\Hypertarget{view_8c_a4afef7fac8cfb8377a950142098d2eef}\label{view_8c_a4afef7fac8cfb8377a950142098d2eef}} 
+\index{view.c@{view.c}!menufinal@{menufinal}}
+\index{menufinal@{menufinal}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{menufinal}{menufinal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ menufinal}
+
+\mbox{\Hypertarget{view_8c_aca432cd93b9b3c8eda2fa9348a473b2e}\label{view_8c_aca432cd93b9b3c8eda2fa9348a473b2e}} 
+\index{view.c@{view.c}!mouseHelper@{mouseHelper}}
+\index{mouseHelper@{mouseHelper}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{mouseHelper}{mouseHelper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMouseHelper}{Mouse\+Helper}} mouse\+Helper}
+
+\mbox{\Hypertarget{view_8c_a37726571bfdad275d6ca5a8c51e3de21}\label{view_8c_a37726571bfdad275d6ca5a8c51e3de21}} 
+\index{view.c@{view.c}!numBackgroundFrames@{numBackgroundFrames}}
+\index{numBackgroundFrames@{numBackgroundFrames}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{numBackgroundFrames}{numBackgroundFrames}}
+{\footnotesize\ttfamily int num\+Background\+Frames = 0}
+
+\mbox{\Hypertarget{view_8c_a50b0d83b7848a46c392534b359aaf81a}\label{view_8c_a50b0d83b7848a46c392534b359aaf81a}} 
+\index{view.c@{view.c}!packet\_mouse@{packet\_mouse}}
+\index{packet\_mouse@{packet\_mouse}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{packet\_mouse}{packet\_mouse}}
+{\footnotesize\ttfamily struct packet packet\+\_\+mouse}
+
+\mbox{\Hypertarget{view_8c_af3ad07dbcda12aa857fe4a025afb7dd2}\label{view_8c_af3ad07dbcda12aa857fe4a025afb7dd2}} 
+\index{view.c@{view.c}!pairs@{pairs}}
+\index{pairs@{pairs}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{pairs}{pairs}}
+{\footnotesize\ttfamily uint8\+\_\+t pairs}
+
+\mbox{\Hypertarget{view_8c_a659e9eb6fbed575191bcbd8521623ac8}\label{view_8c_a659e9eb6fbed575191bcbd8521623ac8}} 
+\index{view.c@{view.c}!pairs\_completed@{pairs\_completed}}
+\index{pairs\_completed@{pairs\_completed}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{pairs\_completed}{pairs\_completed}}
+{\footnotesize\ttfamily uint8\+\_\+t pairs\+\_\+completed}
+
+\mbox{\Hypertarget{view_8c_af6afb1669ff91f5213ecb926fe2336a0}\label{view_8c_af6afb1669ff91f5213ecb926fe2336a0}} 
+\index{view.c@{view.c}!pause\_time@{pause\_time}}
+\index{pause\_time@{pause\_time}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{pause\_time}{pause\_time}}
+{\footnotesize\ttfamily uint32\+\_\+t pause\+\_\+time}
+
+\mbox{\Hypertarget{view_8c_afdd3ece1a649590c30712859481cf383}\label{view_8c_afdd3ece1a649590c30712859481cf383}} 
+\index{view.c@{view.c}!secondBuffer@{secondBuffer}}
+\index{secondBuffer@{secondBuffer}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{secondBuffer}{secondBuffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ second\+Buffer}
+
+\mbox{\Hypertarget{view_8c_ab49a8524f6fb3754b36d6bac1f67a71b}\label{view_8c_ab49a8524f6fb3754b36d6bac1f67a71b}} 
+\index{view.c@{view.c}!selected\_position@{selected\_position}}
+\index{selected\_position@{selected\_position}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{selected\_position}{selected\_position}}
+{\footnotesize\ttfamily int selected\+\_\+position}
+
+\mbox{\Hypertarget{view_8c_a063b033095d66a781d7ecd123ca4aa30}\label{view_8c_a063b033095d66a781d7ecd123ca4aa30}} 
+\index{view.c@{view.c}!setupDone@{setupDone}}
+\index{setupDone@{setupDone}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{setupDone}{setupDone}}
+{\footnotesize\ttfamily bool setup\+Done =false}
+
+\mbox{\Hypertarget{view_8c_a22ebb7dbd8035fd710cf404dd103c52a}\label{view_8c_a22ebb7dbd8035fd710cf404dd103c52a}} 
+\index{view.c@{view.c}!setupState@{setupState}}
+\index{setupState@{setupState}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{setupState}{setupState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}{Setup}} setup\+State}
+
+\mbox{\Hypertarget{view_8c_a42ff89d25c12a3302f87202d760ac1df}\label{view_8c_a42ff89d25c12a3302f87202d760ac1df}} 
+\index{view.c@{view.c}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily uint32\+\_\+t start\+\_\+time}
+
+\mbox{\Hypertarget{view_8c_a1eec546f406e03babcc512063faf2adc}\label{view_8c_a1eec546f406e03babcc512063faf2adc}} 
+\index{view.c@{view.c}!table@{table}}
+\index{table@{table}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily uint64\+\_\+t table}
+
+\mbox{\Hypertarget{view_8c_aaa315b42faeb5c50cdd8a53f65fd1b9e}\label{view_8c_aaa315b42faeb5c50cdd8a53f65fd1b9e}} 
+\index{view.c@{view.c}!thirdBuffer@{thirdBuffer}}
+\index{thirdBuffer@{thirdBuffer}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{thirdBuffer}{thirdBuffer}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ third\+Buffer}
+
+\mbox{\Hypertarget{view_8c_a6e85223fcd11d3cf3a1fff5b211332de}\label{view_8c_a6e85223fcd11d3cf3a1fff5b211332de}} 
+\index{view.c@{view.c}!timer\_count@{timer\_count}}
+\index{timer\_count@{timer\_count}!view.c@{view.c}}
+\doxysubsubsection{\texorpdfstring{timer\_count}{timer\_count}}
+{\footnotesize\ttfamily int timer\+\_\+count}
+

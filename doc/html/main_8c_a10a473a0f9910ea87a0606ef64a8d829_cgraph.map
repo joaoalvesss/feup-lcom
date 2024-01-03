@@ -1,0 +1,16 @@
+<map id="startSession" name="startSession">
+<area shape="rect" id="node1" title=" " alt="" coords="5,198,108,225"/>
+<area shape="rect" id="node2" href="$keyboard_8c.html#a4f3036dc383cb3264414c231f2ca11e4" title="this function subscribes the keyboard interrupts" alt="" coords="183,5,334,47"/>
+<area shape="rect" id="node3" href="$mouse_8c.html#a5cab36c12945662a62fe124c448d4d27" title="this function subscribes the keyboard interrupts" alt="" coords="156,71,361,98"/>
+<area shape="rect" id="node4" href="$mouse_8c.html#a38d52a9770ba9b635e98e4968ae7c330" title="this function writes directly into the mouse the command that is passed" alt="" coords="169,122,348,149"/>
+<area shape="rect" id="node8" href="$view_8c.html#aa349fdcbc9b3263b4ad1add7c91441d9" title="set the buffers in order to use double buffering to avoid flickers in the game" alt="" coords="215,173,303,199"/>
+<area shape="rect" id="node10" href="$model_8c.html#ac568ae681f60f548a92452e071667544" title="creates every sprite used in the game using the method createSprite from sprite.h file" alt="" coords="207,223,310,250"/>
+<area shape="rect" id="node12" href="$trace_8txt.html#a83e3c448bf6098d0a1abf5fbc002b308" title=" " alt="" coords="181,274,337,301"/>
+<area shape="rect" id="node13" href="$timer_8c.html#a74c67a2dec2c0d3d6f0cf68e89d4b14e" title="function to subscribe timer interruptions" alt="" coords="161,325,357,351"/>
+<area shape="rect" id="node14" href="$video_8c.html#acf777d8344d18301dc8c93fed15070e6" title="allocates memory for the mode and sets and configurates the desired video mode" alt="" coords="215,375,302,402"/>
+<area shape="rect" id="node5" href="$keyboard_8c.html#ad062237bab294a2930773a4d2a031c04" title="this function tries to write the given command to the given port" alt="" coords="409,56,583,97"/>
+<area shape="rect" id="node7" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title=" " alt="" coords="848,93,947,119"/>
+<area shape="rect" id="node6" href="$keyboard_8c.html#a4005db640c1167c3498e8c534382a894" title="this function reads the current status of the mouse or keyboard" alt="" coords="631,56,800,97"/>
+<area shape="rect" id="node9" href="$video_8c.html#abd60344605e00ded09cc17ee62338f50" title="allocates virtual and physical memory for the buffers depending on the mode that we pass to it" alt="" coords="419,173,573,199"/>
+<area shape="rect" id="node11" href="$sprites_8c.html#a6c5f813a7c41430ff5a2caf595daedfa" title="this class adpated function creates a sprite object" alt="" coords="445,223,547,250"/>
+</map>

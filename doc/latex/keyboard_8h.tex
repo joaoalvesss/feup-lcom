@@ -1,0 +1,198 @@
+\hypertarget{keyboard_8h}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/devices/keyboard/keyboard.h File Reference}
+\label{keyboard_8h}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/keyboard/keyboard.h@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/keyboard/keyboard.h}}
+
+
+file that has functions to allow configurating and using the keyboard, as well as some functions that can be used by either keyboard or mouse  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+Include dependency graph for keyboard.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{keyboard_8h_a4f3036dc383cb3264414c231f2ca11e4}{keyboard\+\_\+subscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em this function subscribes the keyboard interrupts \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_a97f07efdc4bf5955236db1b8f111daf6}{keyboard\+\_\+unsubscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em this function unsubscribes the keyboard interrupts \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_aae0497df68cd37731baf61c8f0677540}{keyboard\+\_\+mouse\+\_\+read\+\_\+output}} (uint8\+\_\+t mouse, uint8\+\_\+t port, uint8\+\_\+t $\ast$output)
+\begin{DoxyCompactList}\small\item\em this function reads the current status of the mouse or keyboard \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_ad062237bab294a2930773a4d2a031c04}{keyboard\+\_\+mouse\+\_\+write\+\_\+command}} (uint8\+\_\+t port, uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em this function tries to write the given command to the given port \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{keyboard_8h_a4005db640c1167c3498e8c534382a894}{keyboard\+\_\+mouse\+\_\+read\+\_\+status}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em this function reads the current status of the mouse or keyboard \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+file that has functions to allow configurating and using the keyboard, as well as some functions that can be used by either keyboard or mouse 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8h_aae0497df68cd37731baf61c8f0677540}\label{keyboard_8h_aae0497df68cd37731baf61c8f0677540}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_mouse\_read\_output@{keyboard\_mouse\_read\_output}}
+\index{keyboard\_mouse\_read\_output@{keyboard\_mouse\_read\_output}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_mouse\_read\_output()}{keyboard\_mouse\_read\_output()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+mouse\+\_\+read\+\_\+output (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mouse,  }\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+this function reads the current status of the mouse or keyboard 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse} & simple variable just to know when we want to read from keyboard or from mouse \\
+\hline
+{\em port} & the port where the output is gone be read from \\
+\hline
+{\em output} & the current data that is avaiable in the port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if sucess, otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_aae0497df68cd37731baf61c8f0677540_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_aae0497df68cd37731baf61c8f0677540_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8h_a4005db640c1167c3498e8c534382a894}\label{keyboard_8h_a4005db640c1167c3498e8c534382a894}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_mouse\_read\_status@{keyboard\_mouse\_read\_status}}
+\index{keyboard\_mouse\_read\_status@{keyboard\_mouse\_read\_status}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_mouse\_read\_status()}{keyboard\_mouse\_read\_status()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+mouse\+\_\+read\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+this function reads the current status of the mouse or keyboard 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & variable where the current keyboard or mouse status is \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if sucess, otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{keyboard_8h_a4005db640c1167c3498e8c534382a894_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_a4005db640c1167c3498e8c534382a894_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8h_ad062237bab294a2930773a4d2a031c04}\label{keyboard_8h_ad062237bab294a2930773a4d2a031c04}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_mouse\_write\_command@{keyboard\_mouse\_write\_command}}
+\index{keyboard\_mouse\_write\_command@{keyboard\_mouse\_write\_command}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_mouse\_write\_command()}{keyboard\_mouse\_write\_command()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+mouse\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+this function tries to write the given command to the given port 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & where the command is going to be written \\
+\hline
+{\em command} & the configuration command that is going to be written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if sucess, otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_ad062237bab294a2930773a4d2a031c04_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_ad062237bab294a2930773a4d2a031c04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8h_a4f3036dc383cb3264414c231f2ca11e4}\label{keyboard_8h_a4f3036dc383cb3264414c231f2ca11e4}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_subscribe\_interrupts@{keyboard\_subscribe\_interrupts}}
+\index{keyboard\_subscribe\_interrupts@{keyboard\_subscribe\_interrupts}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe\_interrupts()}{keyboard\_subscribe\_interrupts()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+subscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function subscribes the keyboard interrupts 
+
+\begin{DoxyReturn}{Returns}
+0 if sucess, otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_a4f3036dc383cb3264414c231f2ca11e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8h_a97f07efdc4bf5955236db1b8f111daf6}\label{keyboard_8h_a97f07efdc4bf5955236db1b8f111daf6}} 
+\index{keyboard.h@{keyboard.h}!keyboard\_unsubscribe\_interrupts@{keyboard\_unsubscribe\_interrupts}}
+\index{keyboard\_unsubscribe\_interrupts@{keyboard\_unsubscribe\_interrupts}!keyboard.h@{keyboard.h}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe\_interrupts()}{keyboard\_unsubscribe\_interrupts()}}
+{\footnotesize\ttfamily int() keyboard\+\_\+unsubscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function unsubscribes the keyboard interrupts 
+
+\begin{DoxyReturn}{Returns}
+0 if sucess, otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_a97f07efdc4bf5955236db1b8f111daf6_icgraph}
+\end{center}
+\end{figure}

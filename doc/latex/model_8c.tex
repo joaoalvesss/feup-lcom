@@ -1,0 +1,538 @@
+\hypertarget{model_8c}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/model/model.c File Reference}
+\label{model_8c}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/model/model.c@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/model/model.c}}
+{\ttfamily \#include \char`\"{}model.\+h\char`\"{}}\newline
+Include dependency graph for model.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{model_8c_ada1f75d308dd269c459abd78814c464a}{update\+Timer\+State}} ()
+\begin{DoxyCompactList}\small\item\em this function is responsible for calling the method flip\+Buffers at each timer interruption and that allows to have double buffering into the game and for having a counter so we can use it to do time stuff too \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8c_ae68939cf468635ca6f6e4415e876fb89}{update\+Keyboard\+State}} ()
+\begin{DoxyCompactList}\small\item\em this function uses \char`\"{}state machines\char`\"{} to detect where the game is at the moment and uses the keyboard to check the pressed keys in order to change the states of the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8c_a3a151327b39d8c3314bca0f254f8dd6d}{update\+Mouse\+State}} ()
+\begin{DoxyCompactList}\small\item\em this fuction is responsable for interpreting the mouse movement and clicks, and update the mouse parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8c_a91f146a53c511245f78f9e55e7ffb36b}{update\+States}} ()
+\begin{DoxyCompactList}\small\item\em this function interprets the mouse clicks in the screen in order to change the \char`\"{}state machines\char`\"{} in some way \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8c_ac568ae681f60f548a92452e071667544}{setup\+Sprites}} ()
+\begin{DoxyCompactList}\small\item\em creates every sprite used in the game using the method create\+Sprite from sprite.\+h file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{model_8c_aff10aec7cc06629594d351d947dbbaa5}{destroy\+Sprites}} ()
+\begin{DoxyCompactList}\small\item\em frees the memory of every sprite used in the game using the method destroy\+Sprite from sprite.\+h file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efc}{System}} \mbox{\hyperlink{model_8c_a5414c744a386198eda56d5669f52bb33}{sys\+State}} = \mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca1061be6c3fb88d32829cba6f6b2be304}{R\+U\+N\+N\+I\+NG}}
+\item 
+\mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}{Menu}} \mbox{\hyperlink{model_8c_acd73e621715f6206cb3df9cd7933a491}{men\+State}} = \mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2ae9cc1cda766decf12c9f739f15775c40}{M\+E\+N\+U\+\_\+\+S\+T\+A\+RT}}
+\item 
+\mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} \mbox{\hyperlink{model_8c_aa43770ca0b61ba59803328cd908d8cd3}{dif\+State}} = \mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a5340ec7ecef6cc3886684a3bd3450d64}{M\+E\+D\+I\+UM}}
+\item 
+\mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}{Frame}} \mbox{\hyperlink{model_8c_ac6719a3315e160835d6f40f7526d1b2b}{frame\+State}} = \mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5aec34b0b90541576a22697631105dc847}{N\+EW}}
+\item 
+\mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}{Setup}} \mbox{\hyperlink{model_8c_a22ebb7dbd8035fd710cf404dd103c52a}{setup\+State}} = \mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63abfea6036e64d9c7c773d277a57d2f959}{DO}}
+\item 
+\mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8}{Game\+Phase}} \mbox{\hyperlink{model_8c_a0bf8d5630d25491480bcf41f44bd5d98}{game\+Phase}} = \mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8a86369c64b458a1e3cffecc2577a9ab7a}{F\+I\+R\+S\+T\+\_\+\+C\+H\+O\+I\+CE}}
+\item 
+bool \mbox{\hyperlink{model_8c_a1ffad002778000343e5ba14a25b5287f}{card\+Selected}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{model_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}}
+\item 
+\mbox{\hyperlink{structMouseHelper}{Mouse\+Helper}} \mbox{\hyperlink{model_8c_aca432cd93b9b3c8eda2fa9348a473b2e}{mouse\+Helper}}
+\item 
+int \mbox{\hyperlink{model_8c_ad25735efbc541124a1c2593159f7f47b}{mouse\+\_\+ih\+\_\+counter}}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{model_8c_ad6835488a133262b9dbb5d020b912b53}{m\+\_\+info}}
+\item 
+int \mbox{\hyperlink{model_8c_a6e85223fcd11d3cf3a1fff5b211332de}{timer\+\_\+count}} = 0
+\item 
+int \mbox{\hyperlink{model_8c_ab7066de5a3495b1aab8b8e9801bfcd46}{frame\+\_\+x\+\_\+movment}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{model_8c_aa609298e312c52ae74a53ac6c8274fd3}{mouse\+\_\+data}}
+\item 
+int \mbox{\hyperlink{model_8c_a4519f2958549e94412e27b00addeb415}{frame\+\_\+y\+\_\+movment}}
+\item 
+int \mbox{\hyperlink{model_8c_ab49a8524f6fb3754b36d6bac1f67a71b}{selected\+\_\+position}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a481f0b7279820430e972548a1dca4206}{back1}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_abd04a2065781a609fc4df7db7ab8820d}{back2}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a0c0f74f2b201c529cfd234450278c10c}{back3}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_acf91042f48520edee3ff230bbaffe83a}{dino1}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_ac5b36bf420c6053ce56b8f864d73b38e}{dino2}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a5470ac2ca861adac166f6f06156e1330}{dino3}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_afb684f27533fc4c7c582b077ae4882e5}{dino4}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a2fb9ba07cd63b0519b79e04473164655}{dino5}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a0268547492dee638ffff005352caf8f2}{dino6}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a7587a6777e0f349b57d29575f8a5f07e}{dino7}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a63e05b2c2a0a9b2b05d78bab8f14ce5d}{dino8}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a61d0c7fc9d9720d2ceb8044442cc3806}{colon}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a481f62f2617feed5035eab000bd88cb7}{digit0}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a4062ded413aafd2aa16cbb135c0a99b7}{digit1}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_afd6d432cb6892d055c22d6bcf4b6435f}{digit2}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a79cbe5042a8c335b0749bcbc41295742}{digit3}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a0f27c7ccfc95e8845d969caf906ce8f9}{digit4}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_abc01c4432bc0b176375518e1cab84a7a}{digit5}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_aae07c9c4597725d69fae05145ca319a8}{digit6}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_aef2162f2d5abeb6c9647345880fbc142}{digit7}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a2bb0d5a3165a598a6b4675bb8e0d329d}{digit8}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a923d536561d1104a0e3bd5fee5bec7ff}{digit9}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_ad7ddf6054c024b65059bb8ef3bf45ad0}{mainmenu}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a4afef7fac8cfb8377a950142098d2eef}{menufinal}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a69a7242ee147decd9b827b0c721a728c}{background}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a78813029dbbef11099445e377a62f594}{dino\+\_\+mouse}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_a7e106c384127c9b2052c91f0ac6b961d}{frame}}
+\item 
+\mbox{\hyperlink{structSprite}{Sprite}} $\ast$ \mbox{\hyperlink{model_8c_ad5f73e716b860186d2166cf1208b377c}{dino\+\_\+cursor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{model_8c_aff10aec7cc06629594d351d947dbbaa5}\label{model_8c_aff10aec7cc06629594d351d947dbbaa5}} 
+\index{model.c@{model.c}!destroySprites@{destroySprites}}
+\index{destroySprites@{destroySprites}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{destroySprites()}{destroySprites()}}
+{\footnotesize\ttfamily void destroy\+Sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+frees the memory of every sprite used in the game using the method destroy\+Sprite from sprite.\+h file 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{model_8c_aff10aec7cc06629594d351d947dbbaa5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c_aff10aec7cc06629594d351d947dbbaa5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8c_ac568ae681f60f548a92452e071667544}\label{model_8c_ac568ae681f60f548a92452e071667544}} 
+\index{model.c@{model.c}!setupSprites@{setupSprites}}
+\index{setupSprites@{setupSprites}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{setupSprites()}{setupSprites()}}
+{\footnotesize\ttfamily void setup\+Sprites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creates every sprite used in the game using the method create\+Sprite from sprite.\+h file 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{model_8c_ac568ae681f60f548a92452e071667544_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c_ac568ae681f60f548a92452e071667544_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8c_ae68939cf468635ca6f6e4415e876fb89}\label{model_8c_ae68939cf468635ca6f6e4415e876fb89}} 
+\index{model.c@{model.c}!updateKeyboardState@{updateKeyboardState}}
+\index{updateKeyboardState@{updateKeyboardState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{updateKeyboardState()}{updateKeyboardState()}}
+{\footnotesize\ttfamily void update\+Keyboard\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function uses \char`\"{}state machines\char`\"{} to detect where the game is at the moment and uses the keyboard to check the pressed keys in order to change the states of the game 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c_ae68939cf468635ca6f6e4415e876fb89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{model_8c_ae68939cf468635ca6f6e4415e876fb89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8c_a3a151327b39d8c3314bca0f254f8dd6d}\label{model_8c_a3a151327b39d8c3314bca0f254f8dd6d}} 
+\index{model.c@{model.c}!updateMouseState@{updateMouseState}}
+\index{updateMouseState@{updateMouseState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{updateMouseState()}{updateMouseState()}}
+{\footnotesize\ttfamily void update\+Mouse\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this fuction is responsable for interpreting the mouse movement and clicks, and update the mouse parameters 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c_a3a151327b39d8c3314bca0f254f8dd6d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{model_8c_a3a151327b39d8c3314bca0f254f8dd6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8c_a91f146a53c511245f78f9e55e7ffb36b}\label{model_8c_a91f146a53c511245f78f9e55e7ffb36b}} 
+\index{model.c@{model.c}!updateStates@{updateStates}}
+\index{updateStates@{updateStates}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{updateStates()}{updateStates()}}
+{\footnotesize\ttfamily void update\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function interprets the mouse clicks in the screen in order to change the \char`\"{}state machines\char`\"{} in some way 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{model_8c_a91f146a53c511245f78f9e55e7ffb36b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{model_8c_ada1f75d308dd269c459abd78814c464a}\label{model_8c_ada1f75d308dd269c459abd78814c464a}} 
+\index{model.c@{model.c}!updateTimerState@{updateTimerState}}
+\index{updateTimerState@{updateTimerState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{updateTimerState()}{updateTimerState()}}
+{\footnotesize\ttfamily int update\+Timer\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function is responsible for calling the method flip\+Buffers at each timer interruption and that allows to have double buffering into the game and for having a counter so we can use it to do time stuff too 
+
+\begin{DoxyReturn}{Returns}
+int\+: 0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{model_8c_ada1f75d308dd269c459abd78814c464a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{model_8c_ada1f75d308dd269c459abd78814c464a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{model_8c_a481f0b7279820430e972548a1dca4206}\label{model_8c_a481f0b7279820430e972548a1dca4206}} 
+\index{model.c@{model.c}!back1@{back1}}
+\index{back1@{back1}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{back1}{back1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ back1}
+
+\mbox{\Hypertarget{model_8c_abd04a2065781a609fc4df7db7ab8820d}\label{model_8c_abd04a2065781a609fc4df7db7ab8820d}} 
+\index{model.c@{model.c}!back2@{back2}}
+\index{back2@{back2}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{back2}{back2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ back2}
+
+\mbox{\Hypertarget{model_8c_a0c0f74f2b201c529cfd234450278c10c}\label{model_8c_a0c0f74f2b201c529cfd234450278c10c}} 
+\index{model.c@{model.c}!back3@{back3}}
+\index{back3@{back3}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{back3}{back3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ back3}
+
+\mbox{\Hypertarget{model_8c_a69a7242ee147decd9b827b0c721a728c}\label{model_8c_a69a7242ee147decd9b827b0c721a728c}} 
+\index{model.c@{model.c}!background@{background}}
+\index{background@{background}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ background}
+
+\mbox{\Hypertarget{model_8c_a1ffad002778000343e5ba14a25b5287f}\label{model_8c_a1ffad002778000343e5ba14a25b5287f}} 
+\index{model.c@{model.c}!cardSelected@{cardSelected}}
+\index{cardSelected@{cardSelected}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{cardSelected}{cardSelected}}
+{\footnotesize\ttfamily bool card\+Selected = false}
+
+\mbox{\Hypertarget{model_8c_a61d0c7fc9d9720d2ceb8044442cc3806}\label{model_8c_a61d0c7fc9d9720d2ceb8044442cc3806}} 
+\index{model.c@{model.c}!colon@{colon}}
+\index{colon@{colon}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{colon}{colon}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ colon}
+
+\mbox{\Hypertarget{model_8c_aa43770ca0b61ba59803328cd908d8cd3}\label{model_8c_aa43770ca0b61ba59803328cd908d8cd3}} 
+\index{model.c@{model.c}!difState@{difState}}
+\index{difState@{difState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{difState}{difState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83}{Difficulty}} dif\+State = \mbox{\hyperlink{model_8h_a43efb0a2e61815a66134dfa5ccea0a83a5340ec7ecef6cc3886684a3bd3450d64}{M\+E\+D\+I\+UM}}}
+
+\mbox{\Hypertarget{model_8c_a481f62f2617feed5035eab000bd88cb7}\label{model_8c_a481f62f2617feed5035eab000bd88cb7}} 
+\index{model.c@{model.c}!digit0@{digit0}}
+\index{digit0@{digit0}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit0}{digit0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit0}
+
+\mbox{\Hypertarget{model_8c_a4062ded413aafd2aa16cbb135c0a99b7}\label{model_8c_a4062ded413aafd2aa16cbb135c0a99b7}} 
+\index{model.c@{model.c}!digit1@{digit1}}
+\index{digit1@{digit1}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit1}{digit1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit1}
+
+\mbox{\Hypertarget{model_8c_afd6d432cb6892d055c22d6bcf4b6435f}\label{model_8c_afd6d432cb6892d055c22d6bcf4b6435f}} 
+\index{model.c@{model.c}!digit2@{digit2}}
+\index{digit2@{digit2}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit2}{digit2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit2}
+
+\mbox{\Hypertarget{model_8c_a79cbe5042a8c335b0749bcbc41295742}\label{model_8c_a79cbe5042a8c335b0749bcbc41295742}} 
+\index{model.c@{model.c}!digit3@{digit3}}
+\index{digit3@{digit3}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit3}{digit3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit3}
+
+\mbox{\Hypertarget{model_8c_a0f27c7ccfc95e8845d969caf906ce8f9}\label{model_8c_a0f27c7ccfc95e8845d969caf906ce8f9}} 
+\index{model.c@{model.c}!digit4@{digit4}}
+\index{digit4@{digit4}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit4}{digit4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit4}
+
+\mbox{\Hypertarget{model_8c_abc01c4432bc0b176375518e1cab84a7a}\label{model_8c_abc01c4432bc0b176375518e1cab84a7a}} 
+\index{model.c@{model.c}!digit5@{digit5}}
+\index{digit5@{digit5}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit5}{digit5}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit5}
+
+\mbox{\Hypertarget{model_8c_aae07c9c4597725d69fae05145ca319a8}\label{model_8c_aae07c9c4597725d69fae05145ca319a8}} 
+\index{model.c@{model.c}!digit6@{digit6}}
+\index{digit6@{digit6}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit6}{digit6}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit6}
+
+\mbox{\Hypertarget{model_8c_aef2162f2d5abeb6c9647345880fbc142}\label{model_8c_aef2162f2d5abeb6c9647345880fbc142}} 
+\index{model.c@{model.c}!digit7@{digit7}}
+\index{digit7@{digit7}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit7}{digit7}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit7}
+
+\mbox{\Hypertarget{model_8c_a2bb0d5a3165a598a6b4675bb8e0d329d}\label{model_8c_a2bb0d5a3165a598a6b4675bb8e0d329d}} 
+\index{model.c@{model.c}!digit8@{digit8}}
+\index{digit8@{digit8}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit8}{digit8}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit8}
+
+\mbox{\Hypertarget{model_8c_a923d536561d1104a0e3bd5fee5bec7ff}\label{model_8c_a923d536561d1104a0e3bd5fee5bec7ff}} 
+\index{model.c@{model.c}!digit9@{digit9}}
+\index{digit9@{digit9}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{digit9}{digit9}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ digit9}
+
+\mbox{\Hypertarget{model_8c_acf91042f48520edee3ff230bbaffe83a}\label{model_8c_acf91042f48520edee3ff230bbaffe83a}} 
+\index{model.c@{model.c}!dino1@{dino1}}
+\index{dino1@{dino1}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino1}{dino1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino1}
+
+\mbox{\Hypertarget{model_8c_ac5b36bf420c6053ce56b8f864d73b38e}\label{model_8c_ac5b36bf420c6053ce56b8f864d73b38e}} 
+\index{model.c@{model.c}!dino2@{dino2}}
+\index{dino2@{dino2}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino2}{dino2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino2}
+
+\mbox{\Hypertarget{model_8c_a5470ac2ca861adac166f6f06156e1330}\label{model_8c_a5470ac2ca861adac166f6f06156e1330}} 
+\index{model.c@{model.c}!dino3@{dino3}}
+\index{dino3@{dino3}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino3}{dino3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino3}
+
+\mbox{\Hypertarget{model_8c_afb684f27533fc4c7c582b077ae4882e5}\label{model_8c_afb684f27533fc4c7c582b077ae4882e5}} 
+\index{model.c@{model.c}!dino4@{dino4}}
+\index{dino4@{dino4}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino4}{dino4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino4}
+
+\mbox{\Hypertarget{model_8c_a2fb9ba07cd63b0519b79e04473164655}\label{model_8c_a2fb9ba07cd63b0519b79e04473164655}} 
+\index{model.c@{model.c}!dino5@{dino5}}
+\index{dino5@{dino5}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino5}{dino5}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino5}
+
+\mbox{\Hypertarget{model_8c_a0268547492dee638ffff005352caf8f2}\label{model_8c_a0268547492dee638ffff005352caf8f2}} 
+\index{model.c@{model.c}!dino6@{dino6}}
+\index{dino6@{dino6}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino6}{dino6}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino6}
+
+\mbox{\Hypertarget{model_8c_a7587a6777e0f349b57d29575f8a5f07e}\label{model_8c_a7587a6777e0f349b57d29575f8a5f07e}} 
+\index{model.c@{model.c}!dino7@{dino7}}
+\index{dino7@{dino7}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino7}{dino7}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino7}
+
+\mbox{\Hypertarget{model_8c_a63e05b2c2a0a9b2b05d78bab8f14ce5d}\label{model_8c_a63e05b2c2a0a9b2b05d78bab8f14ce5d}} 
+\index{model.c@{model.c}!dino8@{dino8}}
+\index{dino8@{dino8}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino8}{dino8}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino8}
+
+\mbox{\Hypertarget{model_8c_ad5f73e716b860186d2166cf1208b377c}\label{model_8c_ad5f73e716b860186d2166cf1208b377c}} 
+\index{model.c@{model.c}!dino\_cursor@{dino\_cursor}}
+\index{dino\_cursor@{dino\_cursor}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino\_cursor}{dino\_cursor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino\+\_\+cursor}
+
+\mbox{\Hypertarget{model_8c_a78813029dbbef11099445e377a62f594}\label{model_8c_a78813029dbbef11099445e377a62f594}} 
+\index{model.c@{model.c}!dino\_mouse@{dino\_mouse}}
+\index{dino\_mouse@{dino\_mouse}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{dino\_mouse}{dino\_mouse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ dino\+\_\+mouse}
+
+\mbox{\Hypertarget{model_8c_a7e106c384127c9b2052c91f0ac6b961d}\label{model_8c_a7e106c384127c9b2052c91f0ac6b961d}} 
+\index{model.c@{model.c}!frame@{frame}}
+\index{frame@{frame}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ frame}
+
+\mbox{\Hypertarget{model_8c_ab7066de5a3495b1aab8b8e9801bfcd46}\label{model_8c_ab7066de5a3495b1aab8b8e9801bfcd46}} 
+\index{model.c@{model.c}!frame\_x\_movment@{frame\_x\_movment}}
+\index{frame\_x\_movment@{frame\_x\_movment}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{frame\_x\_movment}{frame\_x\_movment}}
+{\footnotesize\ttfamily int frame\+\_\+x\+\_\+movment}
+
+\mbox{\Hypertarget{model_8c_a4519f2958549e94412e27b00addeb415}\label{model_8c_a4519f2958549e94412e27b00addeb415}} 
+\index{model.c@{model.c}!frame\_y\_movment@{frame\_y\_movment}}
+\index{frame\_y\_movment@{frame\_y\_movment}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{frame\_y\_movment}{frame\_y\_movment}}
+{\footnotesize\ttfamily int frame\+\_\+y\+\_\+movment}
+
+\mbox{\Hypertarget{model_8c_ac6719a3315e160835d6f40f7526d1b2b}\label{model_8c_ac6719a3315e160835d6f40f7526d1b2b}} 
+\index{model.c@{model.c}!frameState@{frameState}}
+\index{frameState@{frameState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{frameState}{frameState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5}{Frame}} frame\+State = \mbox{\hyperlink{model_8h_a1a3c9a246bb17ddd6d40809f3521a5c5aec34b0b90541576a22697631105dc847}{N\+EW}}}
+
+\mbox{\Hypertarget{model_8c_a0bf8d5630d25491480bcf41f44bd5d98}\label{model_8c_a0bf8d5630d25491480bcf41f44bd5d98}} 
+\index{model.c@{model.c}!gamePhase@{gamePhase}}
+\index{gamePhase@{gamePhase}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{gamePhase}{gamePhase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8}{Game\+Phase}} game\+Phase = \mbox{\hyperlink{model_8h_a896617de6e1c82953f407789633057d8a86369c64b458a1e3cffecc2577a9ab7a}{F\+I\+R\+S\+T\+\_\+\+C\+H\+O\+I\+CE}}}
+
+\mbox{\Hypertarget{model_8c_ad6835488a133262b9dbb5d020b912b53}\label{model_8c_ad6835488a133262b9dbb5d020b912b53}} 
+\index{model.c@{model.c}!m\_info@{m\_info}}
+\index{m\_info@{m\_info}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{m\_info}{m\_info}}
+{\footnotesize\ttfamily vbe\+\_\+mode\+\_\+info\+\_\+t m\+\_\+info}
+
+\mbox{\Hypertarget{model_8c_ad7ddf6054c024b65059bb8ef3bf45ad0}\label{model_8c_ad7ddf6054c024b65059bb8ef3bf45ad0}} 
+\index{model.c@{model.c}!mainmenu@{mainmenu}}
+\index{mainmenu@{mainmenu}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{mainmenu}{mainmenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ mainmenu}
+
+\mbox{\Hypertarget{model_8c_acd73e621715f6206cb3df9cd7933a491}\label{model_8c_acd73e621715f6206cb3df9cd7933a491}} 
+\index{model.c@{model.c}!menState@{menState}}
+\index{menState@{menState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{menState}{menState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2}{Menu}} men\+State = \mbox{\hyperlink{model_8h_af3d52afbb0d088f62e02208b24a9cbd2ae9cc1cda766decf12c9f739f15775c40}{M\+E\+N\+U\+\_\+\+S\+T\+A\+RT}}}
+
+\mbox{\Hypertarget{model_8c_a4afef7fac8cfb8377a950142098d2eef}\label{model_8c_a4afef7fac8cfb8377a950142098d2eef}} 
+\index{model.c@{model.c}!menufinal@{menufinal}}
+\index{menufinal@{menufinal}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{menufinal}{menufinal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSprite}{Sprite}}$\ast$ menufinal}
+
+\mbox{\Hypertarget{model_8c_aa609298e312c52ae74a53ac6c8274fd3}\label{model_8c_aa609298e312c52ae74a53ac6c8274fd3}} 
+\index{model.c@{model.c}!mouse\_data@{mouse\_data}}
+\index{mouse\_data@{mouse\_data}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_data}{mouse\_data}}
+{\footnotesize\ttfamily uint8\+\_\+t mouse\+\_\+data}
+
+\mbox{\Hypertarget{model_8c_ad25735efbc541124a1c2593159f7f47b}\label{model_8c_ad25735efbc541124a1c2593159f7f47b}} 
+\index{model.c@{model.c}!mouse\_ih\_counter@{mouse\_ih\_counter}}
+\index{mouse\_ih\_counter@{mouse\_ih\_counter}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih\_counter}{mouse\_ih\_counter}}
+{\footnotesize\ttfamily int mouse\+\_\+ih\+\_\+counter}
+
+\mbox{\Hypertarget{model_8c_aca432cd93b9b3c8eda2fa9348a473b2e}\label{model_8c_aca432cd93b9b3c8eda2fa9348a473b2e}} 
+\index{model.c@{model.c}!mouseHelper@{mouseHelper}}
+\index{mouseHelper@{mouseHelper}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{mouseHelper}{mouseHelper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMouseHelper}{Mouse\+Helper}} mouse\+Helper}
+
+\mbox{\Hypertarget{model_8c_aa1de7a5557e9d96b83cf03f73c92163f}\label{model_8c_aa1de7a5557e9d96b83cf03f73c92163f}} 
+\index{model.c@{model.c}!scancode@{scancode}}
+\index{scancode@{scancode}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{scancode}{scancode}}
+{\footnotesize\ttfamily uint8\+\_\+t scancode}
+
+\mbox{\Hypertarget{model_8c_ab49a8524f6fb3754b36d6bac1f67a71b}\label{model_8c_ab49a8524f6fb3754b36d6bac1f67a71b}} 
+\index{model.c@{model.c}!selected\_position@{selected\_position}}
+\index{selected\_position@{selected\_position}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{selected\_position}{selected\_position}}
+{\footnotesize\ttfamily int selected\+\_\+position}
+
+\mbox{\Hypertarget{model_8c_a22ebb7dbd8035fd710cf404dd103c52a}\label{model_8c_a22ebb7dbd8035fd710cf404dd103c52a}} 
+\index{model.c@{model.c}!setupState@{setupState}}
+\index{setupState@{setupState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{setupState}{setupState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63}{Setup}} setup\+State = \mbox{\hyperlink{model_8h_a03a45bcb13e3495c10e2bbd63e351d63abfea6036e64d9c7c773d277a57d2f959}{DO}}}
+
+\mbox{\Hypertarget{model_8c_a5414c744a386198eda56d5669f52bb33}\label{model_8c_a5414c744a386198eda56d5669f52bb33}} 
+\index{model.c@{model.c}!sysState@{sysState}}
+\index{sysState@{sysState}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{sysState}{sysState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efc}{System}} sys\+State = \mbox{\hyperlink{model_8h_a3ac25b5e5b8766739ad99a7ddaea1efca1061be6c3fb88d32829cba6f6b2be304}{R\+U\+N\+N\+I\+NG}}}
+
+\mbox{\Hypertarget{model_8c_a6e85223fcd11d3cf3a1fff5b211332de}\label{model_8c_a6e85223fcd11d3cf3a1fff5b211332de}} 
+\index{model.c@{model.c}!timer\_count@{timer\_count}}
+\index{timer\_count@{timer\_count}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{timer\_count}{timer\_count}}
+{\footnotesize\ttfamily int timer\+\_\+count = 0}
+

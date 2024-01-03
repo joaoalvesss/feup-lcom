@@ -1,0 +1,103 @@
+\hypertarget{video_8c}{}\doxysection{/mnt/c/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/\+M\+I\+N\+I\+X-\/\+L\+C\+O\+M/shared/proj/src/devices/video/video.c File Reference}
+\label{video_8c}\index{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/video/video.c@{/mnt/c/LCOM/MINIX-\/LCOM/MINIX-\/LCOM/shared/proj/src/devices/video/video.c}}
+{\ttfamily \#include \char`\"{}video.\+h\char`\"{}}\newline
+Include dependency graph for video.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{video_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{video_8c_acf777d8344d18301dc8c93fed15070e6}{video\+\_\+init}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em allocates memory for the mode and sets and configurates the desired video mode \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8c_abd60344605e00ded09cc17ee62338f50}{map\+\_\+phys\+\_\+vir\+\_\+mem}} (uint16\+\_\+t mode, uint8\+\_\+t $\ast$$\ast$buffer)
+\begin{DoxyCompactList}\small\item\em allocates virtual and physical memory for the buffers depending on the mode that we pass to it \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8c_a6b88ccd676a7ccd65e48cfc0857d4a7f}{draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color, uint8\+\_\+t $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{video_8c_a6b88ccd676a7ccd65e48cfc0857d4a7f}\label{video_8c_a6b88ccd676a7ccd65e48cfc0857d4a7f}} 
+\index{video.c@{video.c}!draw\_pixel@{draw\_pixel}}
+\index{draw\_pixel@{draw\_pixel}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel()}{draw\_pixel()}}
+{\footnotesize\ttfamily int draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & vertical position of the pixel on the screen \\
+\hline
+{\em y} & horizontal position of the pixel on the screen \\
+\hline
+{\em color} & the color in hex that we want to draw the pixel \\
+\hline
+{\em buffer} & in which buffer will the memory will be copied \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_a6b88ccd676a7ccd65e48cfc0857d4a7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{video_8c_abd60344605e00ded09cc17ee62338f50}\label{video_8c_abd60344605e00ded09cc17ee62338f50}} 
+\index{video.c@{video.c}!map\_phys\_vir\_mem@{map\_phys\_vir\_mem}}
+\index{map\_phys\_vir\_mem@{map\_phys\_vir\_mem}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{map\_phys\_vir\_mem()}{map\_phys\_vir\_mem()}}
+{\footnotesize\ttfamily int map\+\_\+phys\+\_\+vir\+\_\+mem (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{uint8\+\_\+t $\ast$$\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+allocates virtual and physical memory for the buffers depending on the mode that we pass to it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & video mode that is setted \\
+\hline
+{\em buffer} & where we want to allocate the memory \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_abd60344605e00ded09cc17ee62338f50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{video_8c_acf777d8344d18301dc8c93fed15070e6}\label{video_8c_acf777d8344d18301dc8c93fed15070e6}} 
+\index{video.c@{video.c}!video\_init@{video\_init}}
+\index{video\_init@{video\_init}!video.c@{video.c}}
+\doxysubsubsection{\texorpdfstring{video\_init()}{video\_init()}}
+{\footnotesize\ttfamily int video\+\_\+init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+allocates memory for the mode and sets and configurates the desired video mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & video mode that we want to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success otherwise 1 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video_8c_acf777d8344d18301dc8c93fed15070e6_icgraph}
+\end{center}
+\end{figure}

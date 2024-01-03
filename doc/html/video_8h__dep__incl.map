@@ -1,0 +1,11 @@
+<map id="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/devices/video/video.h" name="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/devices/video/video.h">
+<area shape="rect" id="node1" title="file that has functions to allow configurating and map memory to the graphics card" alt="" coords="339,5,529,61"/>
+<area shape="rect" id="node2" href="$video_8c.html" title=" " alt="" coords="5,109,196,165"/>
+<area shape="rect" id="node3" href="$main_8c.html" title=" " alt="" coords="364,421,555,477"/>
+<area shape="rect" id="node4" href="$model_8h.html" title="file that is part of and MVC system and responsible by the modeling of the game" alt="" coords="339,213,529,269"/>
+<area shape="rect" id="node5" href="$view_8h.html" title="file that is part of and MVC system and responsible for drawing the game images and having the game l..." alt="" coords="539,317,729,373"/>
+<area shape="rect" id="node8" href="$sprites_8h.html" title="file used to create and destroy sprites" alt="" coords="472,109,663,165"/>
+<area shape="rect" id="node7" href="$model_8c.html" title=" " alt="" coords="272,317,463,373"/>
+<area shape="rect" id="node6" href="$view_8c.html" title=" " alt="" coords="579,421,769,477"/>
+<area shape="rect" id="node9" href="$sprites_8c.html" title=" " alt="" coords="605,213,796,269"/>
+</map>

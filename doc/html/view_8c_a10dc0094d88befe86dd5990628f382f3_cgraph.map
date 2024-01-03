@@ -1,0 +1,18 @@
+<map id="drawNewFrame" name="drawNewFrame">
+<area shape="rect" id="node1" title="using a state machine this function detects whenever a state is changed and if so,..." alt="" coords="5,308,129,335"/>
+<area shape="rect" id="node2" href="$view_8c.html#a292a3b997aaab446dcb392b24493ca77" title="this function is responsable of drawing the a game with easy difficulty (4 by 2 card grid) and the fr..." alt="" coords="189,106,313,132"/>
+<area shape="rect" id="node9" href="$view_8c.html#a7880fecdee602199b26433132ae89894" title="this function is responsable of drawing the end game menu sprite" alt="" coords="626,308,741,335"/>
+<area shape="rect" id="node10" href="$view_8c.html#a811ec2b7dab4374f0307023df122c58b" title="this function is responsable of drawing the a game with hard difficulty (4 by 4 card grid) and the fr..." alt="" coords="189,156,313,183"/>
+<area shape="rect" id="node11" href="$view_8c.html#a9288ab4bd242edb3273fcde58e48aa56" title="this function is responsable of drawing the a game with medium difficulty (4 by 3 card grid) and the ..." alt="" coords="177,207,324,234"/>
+<area shape="rect" id="node12" href="$view_8c.html#aab7430a217db9969c46ead48adffbd05" title="this fuction is responsable of drawing the mouse into all menus, and detecting if the mouse is hover ..." alt="" coords="635,359,732,386"/>
+<area shape="rect" id="node13" href="$view_8c.html#a15a9e4278686eb27a82c9758b018c2cd" title="this function is responsable of drawing the main menu sprite" alt="" coords="623,410,744,436"/>
+<area shape="rect" id="node14" href="$view_8c.html#aea25b6a4c32512ab95df8d6084b1f535" title=" " alt="" coords="197,460,304,487"/>
+<area shape="rect" id="node3" href="$view_8c.html#aa4f56964a2bcd69024d3a8cd0d74e702" title="responsible for changing the current sprite that is being displayed in the back part of the cards to ..." alt="" coords="418,106,529,132"/>
+<area shape="rect" id="node4" href="$view_8c.html#a5abe26562fa98b90f366b0ebe29096c3" title="this function draws the game screen timer given the coords" alt="" coords="420,156,527,183"/>
+<area shape="rect" id="node6" href="$view_8c.html#a8f7f58314c6c6348e3bcd7f36fca6a87" title="draws the image given at the coords of the screen given" alt="" coords="792,207,915,234"/>
+<area shape="rect" id="node8" href="$view_8c.html#a5105484162fd30fa5ff587215ed69d73" title="create the &quot;animation&quot; of the dinossaur image (the back part of the cards), the &quot;animation&quot; is create..." alt="" coords="422,207,525,234"/>
+<area shape="rect" id="node5" href="$view_8c.html#a7323e399bcd0931d665010acb8197848" title="this function draws a digit given the digit number and the coords" alt="" coords="633,106,733,132"/>
+<area shape="rect" id="node7" href="$video_8c.html#a6b88ccd676a7ccd65e48cfc0857d4a7f" title="draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen" alt="" coords="963,207,1055,234"/>
+<area shape="rect" id="node15" href="$view_8c.html#a96bb8c3bba5beaeb6905e1446bd469cb" title=" " alt="" coords="372,511,575,538"/>
+<area shape="rect" id="node16" href="$view_8c.html#af396c2c91130bb3a965d7de0881d6fbe" title=" " alt="" coords="411,460,536,487"/>
+</map>

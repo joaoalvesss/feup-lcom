@@ -1,0 +1,12 @@
+<map id="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/devices/keyboard/i8042.h" name="/mnt/c/LCOM/MINIX&#45;LCOM/MINIX&#45;LCOM/shared/proj/src/devices/keyboard/i8042.h">
+<area shape="rect" id="node1" title=" " alt="" coords="231,5,445,61"/>
+<area shape="rect" id="node2" href="$keyboard_8h.html" title="file that has functions to allow configurating and using the keyboard, as well as some functions that..." alt="" coords="219,109,457,165"/>
+<area shape="rect" id="node3" href="$keyboard_8c.html" title=" " alt="" coords="5,213,244,269"/>
+<area shape="rect" id="node4" href="$mouse_8h.html" title="file that has functions to allow configurating and using the mouse" alt="" coords="464,213,671,269"/>
+<area shape="rect" id="node6" href="$main_8c.html" title=" " alt="" coords="331,525,521,581"/>
+<area shape="rect" id="node7" href="$model_8h.html" title="file that is part of and MVC system and responsible by the modeling of the game" alt="" coords="472,317,663,373"/>
+<area shape="rect" id="node5" href="$mouse_8c.html" title=" " alt="" coords="739,317,945,373"/>
+<area shape="rect" id="node8" href="$view_8h.html" title="file that is part of and MVC system and responsible for drawing the game images and having the game l..." alt="" coords="637,421,828,477"/>
+<area shape="rect" id="node10" href="$model_8c.html" title=" " alt="" coords="371,421,561,477"/>
+<area shape="rect" id="node9" href="$view_8c.html" title=" " alt="" coords="637,525,828,581"/>
+</map>

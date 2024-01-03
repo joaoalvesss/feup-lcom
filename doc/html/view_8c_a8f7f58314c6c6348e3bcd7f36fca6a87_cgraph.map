@@ -1,0 +1,4 @@
+<map id="drawSpriteXpm" name="drawSpriteXpm">
+<area shape="rect" id="node1" title="draws the image given at the coords of the screen given" alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node2" href="$video_8c.html#a6b88ccd676a7ccd65e48cfc0857d4a7f" title="draws a pixel in the screen, this is mostly used in the function to draw a sprite on the screen" alt="" coords="176,5,268,32"/>
+</map>
